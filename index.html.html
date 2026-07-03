@@ -1,0 +1,2637 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Revisão Turbo • Cartões de Erros</title>
+<meta name="theme-color" content="#0a0a12" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Revisão Turbo" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* === CSS do Tailwind compilado localmente (offline, sem o aviso do CDN) === */
+
+/* preflight mínimo */
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:currentColor;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-gradient-from: ;--tw-gradient-to: ;--tw-gradient-stops: ;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-scale-x:1;--tw-scale-y:1}
+html{-webkit-text-size-adjust:100%;line-height:1.5;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+body{margin:0;line-height:inherit}
+h1,h2,h3,p{margin:0}
+button{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0;background-color:transparent;background-image:none;cursor:pointer;text-transform:none;-webkit-appearance:button}
+input,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0}
+textarea{resize:vertical}
+input::placeholder,textarea::placeholder{opacity:1;color:#94a3b8}
+svg{display:block;vertical-align:middle}
+[hidden]{display:none}
+/* keyframes que vinham da config do CDN */
+@keyframes floatIn{0%{opacity:0;transform:translateY(24px) scale(.96)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes popIn{0%{transform:scale(.5);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+@keyframes shimmer{100%{transform:translateX(100%)}}
+.animate-floatIn{animation:floatIn .45s cubic-bezier(.2,.8,.2,1)}
+
+/* utilidades */
+.focus\:ring-emerald-400\/60:focus{--tw-ring-color:rgba(52,211,153,0.6)}
+.focus\:ring-violet-400\/60:focus{--tw-ring-color:rgba(167,139,250,0.6)}
+.ring-amber-400\/40{--tw-ring-color:rgba(251,191,36,0.4)}
+.ring-emerald-400\/20{--tw-ring-color:rgba(52,211,153,0.2)}
+.ring-emerald-400\/30{--tw-ring-color:rgba(52,211,153,0.3)}
+.ring-fuchsia-400\/30{--tw-ring-color:rgba(232,121,249,0.3)}
+.ring-rose-300\/30{--tw-ring-color:rgba(253,164,175,0.3)}
+.ring-rose-400\/30{--tw-ring-color:rgba(251,113,133,0.3)}
+.ring-violet-400\/20{--tw-ring-color:rgba(167,139,250,0.2)}
+.ring-white\/10{--tw-ring-color:rgba(255,255,255,0.1)}
+.ring-white\/5{--tw-ring-color:rgba(255,255,255,0.05)}
+.from-amber-400{--tw-gradient-from:rgb(251,191,36);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-emerald-400{--tw-gradient-from:rgb(52,211,153);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-emerald-500{--tw-gradient-from:rgb(16,185,129);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-fuchsia-600\/20{--tw-gradient-from:rgba(192,38,211,0.2);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-rose-400{--tw-gradient-from:rgb(251,113,133);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-rose-500\/30{--tw-gradient-from:rgba(244,63,94,0.3);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-slate-800{--tw-gradient-from:rgb(30,41,59);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.from-violet-500{--tw-gradient-from:rgb(139,92,246);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.hover\:from-fuchsia-600\/30:hover{--tw-gradient-from:rgba(192,38,211,0.3);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.p-3{padding:0.75rem}
+.p-4{padding:1rem}
+.p-5{padding:1.25rem}
+.p-6{padding:1.5rem}
+.px-1{padding-left:0.25rem;padding-right:0.25rem}
+.px-2{padding-left:0.5rem;padding-right:0.5rem}
+.px-3{padding-left:0.75rem;padding-right:0.75rem}
+.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}
+.px-4{padding-left:1rem;padding-right:1rem}
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.px-6{padding-left:1.5rem;padding-right:1.5rem}
+.px-8{padding-left:2rem;padding-right:2rem}
+.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}
+.py-1{padding-top:0.25rem;padding-bottom:0.25rem}
+.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}
+.py-2{padding-top:0.5rem;padding-bottom:0.5rem}
+.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}
+.py-3{padding-top:0.75rem;padding-bottom:0.75rem}
+.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.py-5{padding-top:1.25rem;padding-bottom:1.25rem}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+.via-cyan-400{--tw-gradient-stops:var(--tw-gradient-from),rgb(34,211,238),var(--tw-gradient-to,rgba(0,0,0,0))}
+.-mb-0\.5{margin-bottom:-0.125rem}
+.-rotate-90{--tw-rotate:-90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.absolute{position:absolute}
+.accent-violet-500{accent-color:rgb(139,92,246)}
+.active\:scale-90:active{--tw-scale-x:0.9;--tw-scale-y:0.9;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.active\:scale-95:active{--tw-scale-x:0.95;--tw-scale-y:0.95;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.animate-\[popIn_\.5s\]{animation:popIn .5s cubic-bezier(.2,.8,.2,1)}
+.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.backdrop-blur{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.backdrop-blur-md{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.backdrop-blur-sm{backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.bg-amber-400\/10{background-color:rgba(251,191,36,0.1)}
+.bg-amber-400\/15{background-color:rgba(251,191,36,0.15)}
+.bg-black\/60{background-color:rgba(0,0,0,0.6)}
+.bg-emerald-400\/5{background-color:rgba(52,211,153,0.05)}
+.bg-emerald-500\/10{background-color:rgba(16,185,129,0.1)}
+.bg-emerald-500\/15{background-color:rgba(16,185,129,0.15)}
+.bg-emerald-500\/20{background-color:rgba(16,185,129,0.2)}
+.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}
+.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
+.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}
+.bg-rose-500\/10{background-color:rgba(244,63,94,0.1)}
+.bg-rose-500\/20{background-color:rgba(244,63,94,0.2)}
+.bg-slate-800{background-color:rgb(30,41,59)}
+.bg-slate-800\/50{background-color:rgba(30,41,59,0.5)}
+.bg-slate-800\/60{background-color:rgba(30,41,59,0.6)}
+.bg-slate-900{background-color:rgb(15,23,42)}
+.bg-slate-900\/60{background-color:rgba(15,23,42,0.6)}
+.bg-slate-900\/70{background-color:rgba(15,23,42,0.7)}
+.bg-slate-900\/95{background-color:rgba(15,23,42,0.95)}
+.bg-slate-950\/95{background-color:rgba(2,6,23,0.95)}
+.bg-violet-500\/15{background-color:rgba(139,92,246,0.15)}
+.bg-white\/5{background-color:rgba(255,255,255,0.05)}
+.block{display:block}
+.border-4{border-width:4px;border-style:solid}
+.border-b{border-bottom-width:1px;border-style:solid}
+.border-emerald-400{border-color:rgb(52,211,153)}
+.border-rose-400{border-color:rgb(251,113,133)}
+.border-white\/5{border-color:rgba(255,255,255,0.05)}
+.cursor-pointer{cursor:pointer}
+.disabled\:opacity-40:disabled{opacity:0.4}
+.drop-shadow-\[0_0_20px_rgba\(251\,191\,36\,\.8\)\]{filter:drop-shadow(0 0 20px rgba(251,191,36,.8))}
+.fixed{position:fixed}
+.flex{display:flex}
+.flex-1{flex:1 1 0%}
+.flex-col{flex-direction:column}
+.focus\:ring-2:focus{--tw-ring-shadow:0 0 0 2px var(--tw-ring-color);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+.font-black{font-weight:900}
+.font-bold{font-weight:700}
+.font-extrabold{font-weight:800}
+.font-medium{font-weight:500}
+.font-normal{font-weight:400}
+.font-sans{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.font-semibold{font-weight:600}
+.gap-0\.5{gap:0.125rem}
+.gap-1{gap:0.25rem}
+.gap-1\.5{gap:0.375rem}
+.gap-2{gap:0.5rem}
+.gap-2\.5{gap:0.625rem}
+.gap-3{gap:0.75rem}
+.grid{display:grid}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.h-1\.5{height:0.375rem}
+.h-10{height:2.5rem}
+.h-11{height:2.75rem}
+.h-2{height:0.5rem}
+.h-2\.5{height:0.625rem}
+.h-3{height:0.75rem}
+.h-5{height:1.25rem}
+.h-52{height:13rem}
+.h-7{height:1.75rem}
+.h-8{height:2rem}
+.h-9{height:2.25rem}
+.h-full{height:100%}
+.hidden{display:none}
+.hover\:bg-rose-500\/20:hover{background-color:rgba(244,63,94,0.2)}
+.hover\:bg-slate-700\/60:hover{background-color:rgba(51,65,85,0.6)}
+.hover\:bg-white\/10:hover{background-color:rgba(255,255,255,0.1)}
+.hover\:text-rose-300:hover{color:rgb(253,164,175)}
+.hover\:to-amber-500\/30:hover{--tw-gradient-to:rgba(245,158,11,0.3)}
+.inline-block{display:inline-block}
+.inset-0{top:0;right:0;bottom:0;left:0}
+.items-center{align-items:center}
+.items-end{align-items:flex-end}
+.items-start{align-items:flex-start}
+.justify-between{justify-content:space-between}
+.justify-center{justify-content:center}
+.left-1\/2{left:50%}
+.left-6{left:1.5rem}
+.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.max-h-0{max-height:0px}
+.max-h-\[92vh\]{max-height:92vh}
+.max-w-md{max-width:28rem}
+.max-w-xs{max-width:20rem}
+.mb-1{margin-bottom:0.25rem}
+.mb-1\.5{margin-bottom:0.375rem}
+.mb-2{margin-bottom:0.5rem}
+.mb-2\.5{margin-bottom:0.625rem}
+.mb-3{margin-bottom:0.75rem}
+.mb-5{margin-bottom:1.25rem}
+.mb-6{margin-bottom:1.5rem}
+.min-h-\[420px\]{min-height:420px}
+.min-h-full{min-height:100%}
+.min-h-screen{min-height:100vh}
+.min-w-0{min-width:0px}
+.mt-1{margin-top:0.25rem}
+.mt-2{margin-top:0.5rem}
+.mt-2\.5{margin-top:0.625rem}
+.mt-3{margin-top:0.75rem}
+.mt-5{margin-top:1.25rem}
+.mt-6{margin-top:1.5rem}
+.mx-auto{margin-left:auto;margin-right:auto}
+.my-5{margin-top:1.25rem;margin-bottom:1.25rem}
+.opacity-0{opacity:0}
+.opacity-50{opacity:0.5}
+.opacity-60{opacity:0.6}
+.outline-none{outline:2px solid transparent;outline-offset:2px}
+.overflow-hidden{overflow:hidden}
+.overflow-y-auto{overflow-y:auto}
+.pb-6{padding-bottom:1.5rem}
+.pb-8{padding-bottom:2rem}
+.place-items-center{place-items:center}
+.placeholder\:text-slate-500::placeholder{color:rgb(100,116,139)}
+.pointer-events-none{pointer-events:none}
+.pt-5{padding-top:1.25rem}
+.pt-7{padding-top:1.75rem}
+.relative{position:relative}
+.resize-none{resize:none}
+.right-6{right:1.5rem}
+.ring-1{--tw-ring-shadow:0 0 0 1px var(--tw-ring-color);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+.rotate-\[-14deg\]{--tw-rotate:-14deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.rotate-\[14deg\]{--tw-rotate:14deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.rounded-2xl{border-radius:1rem}
+.rounded-3xl{border-radius:1.5rem}
+.rounded-full{border-radius:9999px}
+.rounded-lg{border-radius:0.5rem}
+.rounded-md{border-radius:0.375rem}
+.rounded-t-3xl{border-top-left-radius:1.5rem;border-top-right-radius:1.5rem}
+.rounded-xl{border-radius:0.75rem}
+.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.6);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.5),0 4px 6px -4px rgba(0,0,0,.5);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.5),0 8px 10px -6px rgba(0,0,0,.5);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+.shrink-0{flex-shrink:0}
+.sticky{position:sticky}
+.tabular-nums{font-variant-numeric:tabular-nums}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-4xl{font-size:2.25rem;line-height:2.5rem}
+.text-5xl{font-size:3rem;line-height:1}
+.text-6xl{font-size:3.75rem;line-height:1}
+.text-\[10px\]{font-size:10px;line-height:1.4}
+.text-\[11px\]{font-size:11px;line-height:1.4}
+.text-\[12px\]{font-size:12px;line-height:1.4}
+.text-\[15px\]{font-size:15px;line-height:1.4}
+.text-amber-300{color:rgb(252,211,77)}
+.text-base{font-size:1rem;line-height:1.5rem}
+.text-center{text-align:center}
+.text-emerald-200{color:rgb(167,243,208)}
+.text-emerald-300{color:rgb(110,231,183)}
+.text-emerald-300\/70{color:rgba(110,231,183,0.7)}
+.text-emerald-400{color:rgb(52,211,153)}
+.text-emerald-400\/80{color:rgba(52,211,153,0.8)}
+.text-left{text-align:left}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.text-right{text-align:right}
+.text-rose-200{color:rgb(254,205,211)}
+.text-rose-300{color:rgb(253,164,175)}
+.text-rose-300\/70{color:rgba(253,164,175,0.7)}
+.text-rose-300\/80{color:rgba(253,164,175,0.8)}
+.text-rose-400{color:rgb(251,113,133)}
+.text-rose-400\/80{color:rgba(251,113,133,0.8)}
+.text-slate-100{color:rgb(241,245,249)}
+.text-slate-200{color:rgb(226,232,240)}
+.text-slate-300{color:rgb(203,213,225)}
+.text-slate-400{color:rgb(148,163,184)}
+.text-slate-500{color:rgb(100,116,139)}
+.text-sm{font-size:0.875rem;line-height:1.25rem}
+.text-violet-300{color:rgb(196,181,253)}
+.text-xl{font-size:1.25rem;line-height:1.75rem}
+.text-xs{font-size:0.75rem;line-height:1rem}
+.to-amber-500\/20{--tw-gradient-to:rgba(245,158,11,0.2)}
+.to-fuchsia-500{--tw-gradient-to:rgb(217,70,239)}
+.to-orange-400{--tw-gradient-to:rgb(251,146,60)}
+.to-orange-400\/30{--tw-gradient-to:rgba(251,146,60,0.3)}
+.to-slate-900{--tw-gradient-to:rgb(15,23,42)}
+.to-teal-400{--tw-gradient-to:rgb(45,212,191)}
+.to-teal-500{--tw-gradient-to:rgb(20,184,166)}
+.to-violet-400{--tw-gradient-to:rgb(167,139,250)}
+.to-yellow-400{--tw-gradient-to:rgb(250,204,21)}
+.top-0{top:0px}
+.top-1\/3{top:33.333333%}
+.top-6{top:1.5rem}
+.tracking-\[0\.3em\]{letter-spacing:0.3em}
+.tracking-tight{letter-spacing:-0.025em}
+.tracking-widest{letter-spacing:0.1em}
+.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.transition-\[width\]{transition-property:width;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.uppercase{text-transform:uppercase}
+.w-0{width:0px}
+.w-10{width:2.5rem}
+.w-11{width:2.75rem}
+.w-5{width:1.25rem}
+.w-52{width:13rem}
+.w-56{width:14rem}
+.w-7{width:1.75rem}
+.w-8{width:2rem}
+.w-9{width:2.25rem}
+.w-full{width:100%}
+.z-10{z-index:10}
+.z-50{z-index:50}
+.z-\[60\]{z-index:60}
+.z-\[80\]{z-index:80}
+.z-\[200\]{z-index:200}
+.bg-slate-950{background-color:rgb(2,6,23)}
+.h-14{height:3.5rem}
+.w-14{width:3.5rem}
+.max-w-sm{max-width:24rem}
+.mb-8{margin-bottom:2rem}
+.py-8{padding-top:2rem;padding-bottom:2rem}
+.hover\:text-slate-300:hover{color:rgb(203,213,225)}
+.duration-1000{transition-duration:1000ms}
+.duration-500{transition-duration:500ms}
+.duration-700{transition-duration:700ms}
+.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}
+.leading-none{line-height:1}
+.leading-relaxed{line-height:1.625}
+.leading-snug{line-height:1.375}
+.leading-tight{line-height:1.25}
+.linear{transition-timing-function:linear}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){margin-top:0.5rem}
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){margin-top:0.625rem}
+.space-y-3 > :not([hidden]) ~ :not([hidden]){margin-top:0.75rem}
+.space-y-5 > :not([hidden]) ~ :not([hidden]){margin-top:1.25rem}
+@media (min-width:640px){.sm\:items-center{align-items:center}}
+@media (min-width:640px){.sm\:rounded-3xl{border-radius:1.5rem}}
+.shadow-black\/50{--tw-shadow:0 10px 25px -5px rgba(0,0,0,.50);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+.shadow-fuchsia-500\/30{--tw-shadow:0 10px 25px -5px rgba(217,70,239,.30);box-shadow:var(--tw-ring-shadow),var(--tw-shadow)}
+/* classes adicionais usadas na seção de sincronização (cyan/sky) */
+.ml-2{margin-left:0.5rem}
+.from-cyan-500{--tw-gradient-from:rgb(6,182,212);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.to-sky-500{--tw-gradient-to:rgb(14,165,233)}
+.focus\:ring-cyan-400\/60:focus{--tw-ring-color:rgba(34,211,238,0.6)}
+.bg-slate-800\/40{background-color:rgba(30,41,59,0.4)}
+.p-3\.5{padding:0.875rem}
+.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}
+.h-px{height:1px}
+.bg-white\/10{background-color:rgba(255,255,255,0.1)}
+.text-cyan-300{color:rgb(103,232,249)}
+.text-white{color:rgb(255,255,255)}
+.select-all{-webkit-user-select:all;user-select:all}
+.ring-rose-400\/20{--tw-ring-color:rgba(251,113,133,0.2)}
+.text-rose-300\/90{color:rgba(253,164,175,0.9)}
+.hover\:bg-rose-500\/10:hover{background-color:rgba(244,63,94,0.1)}
+.my-2{margin-top:0.5rem;margin-bottom:0.5rem}
+/* classes das novas telas (hoje/meta/ofensiva) */
+.items-baseline{align-items:baseline}
+.text-3xl{font-size:1.875rem;line-height:2.25rem}
+.w-6{width:1.5rem}
+.text-violet-300\/80{color:rgba(196,181,253,0.8)}
+.text-amber-300\/80{color:rgba(252,211,77,0.8)}
+.from-violet-600\/15{--tw-gradient-from:rgba(124,58,237,0.15);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,0,0,0))}
+.to-fuchsia-600\/10{--tw-gradient-to:rgba(192,38,211,0.1)}
+
+/* === estilos próprios do app === */
+  html, body { height: 100%; overscroll-behavior: none; }
+  body {
+    background: radial-gradient(1200px 600px at 80% -10%, #1e1b4b 0%, transparent 60%),
+                radial-gradient(900px 500px at -10% 110%, #0e3a3a 0%, transparent 55%),
+                #0a0a12;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card-deck { perspective: 1400px; }
+  .swipe-card { will-change: transform, opacity; touch-action: none; }
+  .stamp { letter-spacing: 2px; }
+  /* XP bar shimmer */
+  .xp-shimmer::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 2.2s infinite;
+  }
+  ::-webkit-scrollbar { width: 0; }
+  .no-select { -webkit-user-select: none; user-select: none; }
+  /* Pisca vermelho de urgência quando o tempo acaba */
+  @keyframes redFlash {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(244,63,94,0); }
+    50%      { box-shadow: 0 0 0 4px rgba(244,63,94,.9), 0 0 38px 6px rgba(244,63,94,.55); }
+  }
+  .time-up {
+    animation: redFlash .7s ease-in-out infinite;
+    --tw-ring-color: rgba(244,63,94,.8);
+  }
+  @keyframes shakeX {
+    0%,100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+  }
+  /* Respiração da pausa Pomodoro (inspira/expira ~8s) */
+  @keyframes breathe {
+    0%, 100% { transform: scale(.78); opacity: .55; }
+    50%      { transform: scale(1.12); opacity: 1; }
+  }
+  .breathe { animation: breathe 8s ease-in-out infinite; }
+  /* Barra de energia animada do menu */
+  .energy-card.selected { box-shadow: 0 0 0 2px rgba(167,139,250,.8), 0 8px 30px -8px rgba(167,139,250,.5); }
+  .bar-fill { transition: width .9s cubic-bezier(.2,.8,.2,1); }
+</style>
+</head>
+<body class="text-slate-100 font-sans antialiased min-h-full">
+
+  <!-- =================== PORTAL DE ENTRADA (login obrigatório) =================== -->
+  <div id="authGate" class="fixed inset-0 z-[200] flex items-center justify-center bg-slate-950 px-5">
+    <div class="w-full max-w-sm">
+      <div class="flex flex-col items-center gap-2 mb-8 text-center">
+        <div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 grid place-items-center shadow-lg shadow-fuchsia-500/30 text-3xl">⚡</div>
+        <h1 class="text-xl font-black">Revisão Turbo</h1>
+        <p class="text-xs text-slate-400">Entre com seu e-mail e senha para continuar</p>
+      </div>
+
+      <!-- verificando se já existe sessão salva neste aparelho -->
+      <div id="authGateChecking" class="text-center text-sm text-slate-400 py-8">Carregando sua conta…</div>
+
+      <!-- sem conexão para verificar / falha ao carregar -->
+      <div id="authGateOffline" class="hidden text-center space-y-3 py-4">
+        <p class="text-sm text-slate-400">Não consegui conectar agora. Verifique sua internet e tente de novo.</p>
+        <button id="authGateRetryBtn" class="w-full rounded-xl bg-white/5 ring-1 ring-white/10 py-3 text-sm font-bold text-slate-100 hover:bg-white/10 active:scale-95 transition">
+          Tentar novamente
+        </button>
+      </div>
+
+      <!-- formulário de login/cadastro -->
+      <div id="authGateForm" class="hidden space-y-2.5">
+        <input id="authEmail" type="email" autocomplete="email" placeholder="seu e-mail"
+               class="w-full rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-3 text-sm text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-violet-400/60 transition" />
+        <input id="authPassword" type="password" autocomplete="current-password" placeholder="sua senha (mínimo 6 caracteres)"
+               class="w-full rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-3 text-sm text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-violet-400/60 transition" />
+        <button id="authLoginBtn" class="w-full rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-3 text-sm font-black active:scale-95 transition">
+          Entrar
+        </button>
+        <button id="authForgotBtn" class="w-full text-center text-[11px] text-slate-500 hover:text-slate-300 transition py-1">
+          Esqueci minha senha
+        </button>
+        <p id="authGateStatus" class="text-center text-[11px] mt-1 hidden"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== TELA DE MENU =================== -->
+  <div id="menuScreen" class="mx-auto max-w-md min-h-screen flex flex-col px-4 pb-8 pt-7 no-select">
+    <!-- Cabeçalho do menu -->
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2.5">
+        <div class="h-11 w-11 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 grid place-items-center shadow-lg shadow-fuchsia-500/30 text-2xl">⚡</div>
+        <div>
+          <h1 class="text-lg font-black leading-tight tracking-tight">Revisão Turbo</h1>
+          <p class="text-xs text-slate-400 leading-tight">Revise seus erros, um por vez</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="soundBtnMenu" title="Ligar/desligar som" class="grid h-10 w-10 place-items-center rounded-full bg-slate-800/60 ring-1 ring-white/5 text-lg hover:bg-slate-700/60 active:scale-90 transition">🔊</button>
+        <button id="syncBtnMenu" title="Sincronização" class="grid h-10 w-10 place-items-center rounded-full bg-slate-800/60 ring-1 ring-white/5 text-lg hover:bg-slate-700/60 active:scale-90 transition">☁️</button>
+        <button id="settingsBtnMenu" title="Meus erros" class="grid h-10 w-10 place-items-center rounded-full bg-slate-800/60 ring-1 ring-white/5 text-lg hover:bg-slate-700/60 active:scale-90 transition">⚙️</button>
+      </div>
+    </div>
+
+    <!-- HOJE: vencidos + ofensiva + meta diária -->
+    <section class="mb-5 rounded-3xl bg-gradient-to-br from-violet-600/15 to-fuchsia-600/10 ring-1 ring-violet-400/20 p-4">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-widest text-violet-300/80">Total de cards</div>
+          <div class="flex items-baseline gap-2">
+            <span id="dueToday" class="text-4xl font-black tabular-nums">0</span>
+            <span class="text-sm text-slate-400">cards</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="text-[11px] font-bold uppercase tracking-widest text-amber-300/80">Ofensiva <button id="resetStreak" title="Zerar ofensiva" class="text-slate-500 hover:text-slate-300 transition">↺</button></div>
+          <div class="text-3xl font-black tabular-nums" id="streakNum">0<span class="text-lg">🔥</span></div>
+        </div>
+      </div>
+      <!-- Meta do dia -->
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="text-[11px] text-slate-400">Meta do dia: <span id="goalToday">0</span>/<span id="goalTarget">20</span></span>
+        <div class="flex items-center gap-1 text-[11px] text-slate-400">
+          <span>Meta:</span>
+          <button id="goalDown" class="grid h-5 w-5 place-items-center rounded bg-white/5 ring-1 ring-white/10 hover:bg-white/10 active:scale-90 transition">−</button>
+          <span id="goalValue" class="w-6 text-center font-bold text-slate-200">20</span>
+          <button id="goalUp" class="grid h-5 w-5 place-items-center rounded bg-white/5 ring-1 ring-white/10 hover:bg-white/10 active:scale-90 transition">+</button>
+        </div>
+      </div>
+      <div class="relative h-2 w-full overflow-hidden rounded-full bg-slate-800">
+        <div id="goalBar" class="h-full w-0 rounded-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-[width] duration-500"></div>
+      </div>
+    </section>
+
+    <!-- Filtro por matéria -->
+    <section class="mb-5">
+      <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2.5 block">Matéria a revisar</label>
+      <select id="subjectFilter" class="w-full rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-2.5 text-sm text-slate-100 outline-none focus:ring-2 focus:ring-violet-400/60 transition"></select>
+    </section>
+
+    <!-- Nível de Energia -->
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2.5">Nível de energia do dia</h2>
+      <div id="energyGrid" class="grid grid-cols-3 gap-2.5"></div>
+      <p id="energyDesc" class="text-center text-[11px] text-slate-400 mt-2.5"></p>
+    </section>
+
+    <!-- Gráfico de acertos por matéria -->
+    <section class="mb-5 rounded-3xl bg-slate-900/60 ring-1 ring-white/5 p-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-400">Acertos por matéria</h2>
+        <button id="resetStats" class="text-[11px] font-semibold text-slate-500 hover:text-rose-300 transition">Zerar</button>
+      </div>
+      <div id="statsChart" class="space-y-2.5"></div>
+      <p id="statsEmpty" class="text-center text-xs text-slate-500 py-5">Responda alguns cards para ver seu desempenho aqui 📊</p>
+    </section>
+
+    <div class="flex-1"></div>
+
+    <!-- Começar -->
+    <button id="startBtn" class="w-full rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-4 text-lg font-black shadow-xl shadow-fuchsia-500/30 active:scale-95 transition flex items-center justify-center gap-2">
+      <span id="startLabel">Começar</span> <span class="text-xl">▶️</span>
+    </button>
+    <p class="text-center text-[10px] text-slate-500 mt-3">A cada 15 min de foco, uma pausa de 3 min é ativada automaticamente 🍅</p>
+    <p class="text-center text-[10px] text-slate-600 mt-1">Revisão Turbo <span id="appVersionMenu">v22</span></p>
+  </div>
+
+  <!-- =================== TELA DO APP (jogo) =================== -->
+  <div id="appScreen" class="hidden mx-auto max-w-md min-h-screen flex flex-col px-4 pb-6 pt-5 no-select">
+
+    <!-- ===== TOPO: Stats / Gamificação ===== -->
+    <header class="space-y-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 grid place-items-center shadow-lg shadow-fuchsia-500/30 text-lg">⚡</div>
+          <div>
+            <h1 class="text-sm font-extrabold leading-tight tracking-tight">Revisão Turbo</h1>
+            <p class="text-[11px] text-slate-400 leading-tight">Um erro por vez</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Combo -->
+          <div id="comboBox" class="flex items-center gap-1.5 rounded-full bg-slate-800/60 ring-1 ring-white/5 px-3 py-1.5 transition-all">
+            <span class="text-base leading-none" id="comboFlame">🔥</span>
+            <div class="leading-none">
+              <div class="text-[10px] text-slate-400 -mb-0.5">Combo</div>
+              <div class="text-sm font-extrabold tabular-nums" id="comboCount">0</div>
+            </div>
+          </div>
+          <!-- Menu -->
+          <button id="homeBtn" title="Voltar ao menu" class="grid h-9 w-9 place-items-center rounded-full bg-slate-800/60 ring-1 ring-white/5 text-lg hover:bg-slate-700/60 active:scale-90 transition">🏠</button>
+          <!-- Som -->
+          <button id="soundBtn" title="Ligar/desligar som" class="grid h-9 w-9 place-items-center rounded-full bg-slate-800/60 ring-1 ring-white/5 text-lg hover:bg-slate-700/60 active:scale-90 transition">🔊</button>
+          <!-- Configurações -->
+          <button id="settingsBtn" title="Configurações" class="grid h-9 w-9 place-items-center rounded-full bg-slate-800/60 ring-1 ring-white/5 text-lg hover:bg-slate-700/60 active:scale-90 transition">⚙️</button>
+        </div>
+      </div>
+
+      <!-- Barra de XP -->
+      <div class="rounded-2xl bg-slate-900/60 ring-1 ring-white/5 p-3">
+        <div class="flex items-center justify-between mb-1.5">
+          <div class="flex items-center gap-1.5">
+            <span class="grid h-5 w-5 place-items-center rounded-md bg-amber-400/15 text-[11px] font-black text-amber-300" id="levelBadge">1</span>
+            <span class="text-xs font-semibold text-slate-300">Nível <span id="levelText">1</span></span>
+          </div>
+          <span class="text-[11px] font-medium text-slate-400 tabular-nums"><span id="xpText">0</span> / <span id="xpGoalText">100</span> XP</span>
+        </div>
+        <div class="relative h-3 w-full overflow-hidden rounded-full bg-slate-800">
+          <div id="xpBar" class="xp-shimmer relative h-full w-0 rounded-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-violet-400 transition-[width] duration-700 ease-out"></div>
+        </div>
+      </div>
+
+      <!-- Pomodoro: progresso até a próxima pausa -->
+      <div class="flex items-center gap-2 px-1">
+        <span class="text-sm">🍅</span>
+        <div class="relative h-1.5 flex-1 overflow-hidden rounded-full bg-slate-800">
+          <div id="pomoBar" class="h-full w-0 rounded-full bg-gradient-to-r from-rose-400 to-orange-400 transition-[width] duration-1000 linear"></div>
+        </div>
+        <span class="text-[10px] font-medium text-slate-400 tabular-nums">Pausa em <span id="pomoText">15:00</span></span>
+      </div>
+
+      <!-- Progresso do baralho -->
+      <div class="flex items-center justify-between text-[11px] text-slate-400 px-1">
+        <span>Revisados: <span class="font-bold text-slate-200" id="doneCount">0</span></span>
+        <span>Restam: <span class="font-bold text-slate-200" id="leftCount">0</span></span>
+        <span>Domínio: <span class="font-bold text-emerald-300" id="masteredCount">0</span></span>
+      </div>
+
+      <!-- Roleta do Erro -->
+      <button id="rouletteBtn" class="mt-3 w-full overflow-hidden rounded-2xl bg-gradient-to-r from-fuchsia-600/20 to-amber-500/20 ring-1 ring-fuchsia-400/30 py-2.5 font-bold text-slate-100 hover:from-fuchsia-600/30 hover:to-amber-500/30 active:scale-95 transition flex items-center justify-center gap-2">
+        <span id="rouletteIcon" class="text-lg inline-block">🎰</span>
+        <span>Roleta do Erro</span>
+        <span class="text-[10px] font-medium text-slate-400">— embaralhar</span>
+      </button>
+    </header>
+
+    <!-- ===== BARALHO DE CARTÕES ===== -->
+    <main class="flex-1 relative my-5">
+      <div id="deck" class="card-deck relative h-full min-h-[420px]"></div>
+
+      <!-- Baralho vazio -->
+      <div id="emptyDeck" class="hidden absolute inset-0 grid place-items-center animate-floatIn">
+        <div class="text-center px-6">
+          <div class="text-6xl mb-3">🗂️</div>
+          <h2 class="text-xl font-black mb-1">Nenhum erro pra revisar</h2>
+          <p class="text-slate-400 text-sm mb-5">Adicione seus próprios erros ou ative os exemplos nas configurações.</p>
+          <button id="openSettingsEmpty" class="w-full rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-3.5 font-bold shadow-lg shadow-fuchsia-500/30 active:scale-95 transition">
+            Abrir configurações ⚙️
+          </button>
+        </div>
+      </div>
+
+      <!-- Tela final -->
+      <div id="finishScreen" class="hidden absolute inset-0 grid place-items-center animate-floatIn">
+        <div class="text-center px-6">
+          <div class="text-6xl mb-3 animate-[popIn_.5s]">🏆</div>
+          <h2 class="text-2xl font-black mb-1">Baralho concluído!</h2>
+          <p class="text-slate-400 text-sm mb-5">Você revisou todos os erros desta rodada.</p>
+          <div class="grid grid-cols-3 gap-2 mb-6">
+            <div class="rounded-xl bg-slate-900/70 ring-1 ring-white/5 py-3">
+              <div class="text-xl font-black text-violet-300" id="finalXp">0</div>
+              <div class="text-[10px] text-slate-400">XP total</div>
+            </div>
+            <div class="rounded-xl bg-slate-900/70 ring-1 ring-white/5 py-3">
+              <div class="text-xl font-black text-amber-300" id="finalCombo">0</div>
+              <div class="text-[10px] text-slate-400">Maior combo</div>
+            </div>
+            <div class="rounded-xl bg-slate-900/70 ring-1 ring-white/5 py-3">
+              <div class="text-xl font-black text-emerald-300" id="finalMastered">0</div>
+              <div class="text-[10px] text-slate-400">Dominados</div>
+            </div>
+          </div>
+          <button id="restartBtn" class="w-full rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-3.5 font-bold shadow-lg shadow-fuchsia-500/30 active:scale-95 transition">
+            Revisar de novo 🔁
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== BOTÕES DE AÇÃO ===== -->
+    <footer id="actions" class="grid grid-cols-2 gap-3">
+      <button id="btnWrong" class="group relative overflow-hidden rounded-2xl bg-rose-500/10 ring-1 ring-rose-400/30 py-4 active:scale-95 transition disabled:opacity-40">
+        <div class="flex items-center justify-center gap-2">
+          <span class="grid h-7 w-7 place-items-center rounded-full bg-rose-500/20 text-rose-300 text-lg font-black">✕</span>
+          <span class="text-left leading-tight">
+            <span class="block text-sm font-bold text-rose-200">Ainda erro</span>
+            <span class="block text-[10px] text-rose-300/70">volta pro baralho</span>
+          </span>
+        </div>
+      </button>
+
+      <button id="btnRight" class="group relative overflow-hidden rounded-2xl bg-emerald-500/10 ring-1 ring-emerald-400/30 py-4 active:scale-95 transition disabled:opacity-40">
+        <div class="flex items-center justify-center gap-2">
+          <span class="text-right leading-tight">
+            <span class="block text-sm font-bold text-emerald-200">Já entendi</span>
+            <span class="block text-[10px] text-emerald-300/70">+XP &amp; combo</span>
+          </span>
+          <span class="grid h-7 w-7 place-items-center rounded-full bg-emerald-500/20 text-emerald-300 text-lg font-black">✓</span>
+        </div>
+      </button>
+    </footer>
+
+    <p class="text-center text-[10px] text-slate-500 mt-3">
+      Dica: arraste o card ⬅️ ➡️ ou use as setas do teclado. Espaço = revelar.
+    </p>
+  </div>
+
+  <!-- ===== MODAL DE CONFIGURAÇÕES ===== -->
+  <div id="settingsModal" class="hidden fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
+    <div id="settingsBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <div class="relative w-full max-w-md max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-slate-900 ring-1 ring-white/10 shadow-2xl animate-floatIn">
+      <!-- Cabeçalho fixo -->
+      <div class="sticky top-0 z-10 flex items-center justify-between bg-slate-900/95 backdrop-blur px-5 py-4 border-b border-white/5">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">⚙️</span>
+          <h2 class="text-base font-extrabold">Meus Erros</h2>
+        </div>
+        <button id="closeSettings" class="grid h-8 w-8 place-items-center rounded-full bg-white/5 hover:bg-white/10 text-slate-300 active:scale-90 transition">✕</button>
+      </div>
+
+      <div class="p-5 space-y-5">
+        <!-- Formulário de novo erro -->
+        <form id="errorForm" class="space-y-3">
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Matéria</label>
+            <input id="fTag" type="text" required maxlength="40" placeholder="Ex.: Matemática, História…" list="tagSuggestions"
+                   class="w-full rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-violet-400/60 transition" />
+            <datalist id="tagSuggestions"></datalist>
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">O que errei</label>
+            <textarea id="fQuestion" required rows="2" maxlength="400" placeholder="A pergunta ou o conceito que você errou…"
+                      class="w-full resize-none rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-violet-400/60 transition"></textarea>
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Resposta certa</label>
+            <textarea id="fAnswer" required rows="3" maxlength="600" placeholder="A explicação correta que você quer fixar…"
+                      class="w-full resize-none rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-emerald-400/60 transition"></textarea>
+          </div>
+          <input type="hidden" id="fEditId" value="" />
+          <div class="flex gap-2">
+            <button type="submit" id="saveError" class="flex-1 rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-3 font-bold shadow-lg shadow-fuchsia-500/30 active:scale-95 transition">
+              Salvar erro
+            </button>
+            <button type="button" id="cancelEdit" class="hidden rounded-2xl bg-white/5 ring-1 ring-white/10 px-4 font-bold text-slate-300 active:scale-95 transition">Cancelar</button>
+          </div>
+        </form>
+
+        <!-- Importar várias de uma vez -->
+        <details class="rounded-2xl bg-slate-800/40 ring-1 ring-white/5 p-3.5">
+          <summary class="text-[11px] font-bold uppercase tracking-widest text-slate-400 cursor-pointer">➕ Importar várias de uma vez (colar)</summary>
+          <p class="text-[11px] text-slate-500 my-2">Cole em <b>JSON</b> (recomendado) — uma lista de <code>{"tag","q","a"}</code> — ou no formato <code>Matéria | Pergunta | Resposta</code>, uma por linha.</p>
+          <textarea id="bulkText" rows="5" placeholder='[{"tag":"Direito Constitucional","q":"...","a":"..."}]'
+                    class="w-full resize-none rounded-xl bg-slate-800 ring-1 ring-white/10 px-3.5 py-2.5 text-[12px] text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-violet-400/60 transition"></textarea>
+          <button id="bulkImport" class="mt-2 w-full rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 py-2.5 text-sm font-bold active:scale-95 transition">
+            Importar coladas
+          </button>
+          <p id="bulkMsg" class="text-center text-[11px] mt-2 hidden"></p>
+        </details>
+
+        <!-- Lista de erros salvos -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-[11px] font-bold uppercase tracking-widest text-slate-400">Salvos por você (<span id="customCount">0</span>)</h3>
+            <button id="clearAll" class="text-[11px] font-semibold text-rose-400/80 hover:text-rose-300 transition">Limpar tudo</button>
+          </div>
+          <div class="relative mb-2">
+            <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">🔍</span>
+            <input id="searchCards" type="text" inputmode="search" placeholder="Buscar por matéria, pergunta ou resposta..."
+                   class="w-full rounded-xl bg-slate-800 ring-1 ring-white/10 pl-9 pr-9 py-2.5 text-[13px] text-slate-100 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-violet-400/60 transition" />
+            <button id="searchClear" type="button" title="Limpar busca" class="hidden absolute right-2 top-1/2 -translate-y-1/2 grid h-6 w-6 place-items-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 active:scale-90 transition">✕</button>
+          </div>
+          <div id="customList" class="space-y-2"></div>
+          <p id="searchEmpty" class="hidden text-center text-xs text-slate-500 py-6">Nenhum card encontrado para essa busca. 🔍</p>
+          <p id="emptyHint" class="text-center text-xs text-slate-500 py-6">Nenhum erro próprio ainda. Adicione o primeiro acima! ✍️</p>
+        </div>
+
+        <!-- Ler em voz alta automaticamente -->
+        <label class="flex items-center justify-between rounded-xl bg-slate-800/40 ring-1 ring-white/5 px-3.5 py-2.5 cursor-pointer">
+          <span class="text-sm text-slate-300">🔊 Ler o card em voz alta automaticamente</span>
+          <input id="autoSpeak" type="checkbox" class="h-5 w-5 accent-violet-500" />
+        </label>
+
+        <button id="applyAndClose" class="w-full rounded-2xl bg-emerald-500/15 ring-1 ring-emerald-400/30 py-3 font-bold text-emerald-200 active:scale-95 transition">
+          Aplicar e revisar 🔁
+        </button>
+
+        <p class="text-center text-[10px] text-slate-500">Seus erros ficam salvos neste navegador (LocalStorage), mesmo fechando a página. Para sincronizar entre aparelhos, use a aba ☁️ Sincronização.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== MODAL DE SINCRONIZAÇÃO =================== -->
+  <div id="syncModal" class="hidden fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
+    <div id="syncBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <div class="relative w-full max-w-md max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-slate-900 ring-1 ring-white/10 shadow-2xl animate-floatIn">
+      <div class="sticky top-0 z-10 flex items-center justify-between bg-slate-900/95 backdrop-blur px-5 py-4 border-b border-white/5">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">☁️</span>
+          <h2 class="text-base font-extrabold">Sincronização <span class="text-[11px] font-normal text-slate-500">v22</span></h2>
+        </div>
+        <button id="closeSync" class="grid h-8 w-8 place-items-center rounded-full bg-white/5 hover:bg-white/10 text-slate-300 active:scale-90 transition">✕</button>
+      </div>
+
+      <div class="p-5 space-y-5">
+        <!-- Sua conta (login já foi feito no portal de entrada do app) -->
+        <div class="rounded-2xl bg-slate-800/40 ring-1 ring-white/5 p-3.5">
+          <h3 class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">☁️ Sua conta</h3>
+          <p class="text-[11px] text-slate-500 mb-3">Entre com o <b>mesmo e-mail e senha</b> em todos os seus aparelhos. O progresso se atualiza sozinho entre eles.</p>
+
+          <!-- sem sessão ativa (não deveria aparecer normalmente, já que o login é obrigatório para abrir o app) -->
+          <div id="cloudLoggedOut" class="hidden space-y-2">
+            <p class="text-[11px] text-slate-500">Você não está conectada no momento.</p>
+          </div>
+
+          <!-- conectado -->
+          <div id="cloudLoggedIn" class="hidden space-y-2">
+            <p class="text-[11px] text-slate-500">Conectada com:</p>
+            <div class="flex items-center gap-2 rounded-xl bg-slate-800/60 ring-1 ring-white/5 px-3.5 py-2.5">
+              <span id="authEmailShown" class="flex-1 text-center text-sm font-bold text-cyan-300 truncate"></span>
+            </div>
+            <button id="authLogoutBtn" class="w-full rounded-xl bg-white/5 ring-1 ring-rose-400/20 py-2 text-[12px] font-bold text-rose-300/90 hover:bg-rose-500/10 active:scale-95 transition">
+              Sair deste aparelho
+            </button>
+          </div>
+
+          <p id="cloudStatus" class="text-center text-[11px] mt-2 hidden"></p>
+        </div>
+
+        <!-- Backup manual (exportar/importar) -->
+        <div class="rounded-2xl bg-slate-800/40 ring-1 ring-white/5 p-3.5">
+          <h3 class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-1">Backup manual</h3>
+          <p class="text-[11px] text-slate-500 mb-3">Exportar salva um arquivo pra este aparelho. Importar também guarda uma cópia na nuvem, pronta pra restaurar em qualquer aparelho.</p>
+          <div class="grid grid-cols-2 gap-2">
+            <button id="exportData" class="rounded-xl bg-white/5 ring-1 ring-white/10 py-2.5 text-sm font-bold text-slate-100 hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-1.5">
+              <span>⬇️</span> Exportar
+            </button>
+            <button id="importData" class="rounded-xl bg-white/5 ring-1 ring-white/10 py-2.5 text-sm font-bold text-slate-100 hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-1.5">
+              <span>⬆️</span> Importar
+            </button>
+          </div>
+          <input id="importFile" type="file" accept="application/json,.json" class="hidden" />
+          <p id="backupMsg" class="text-center text-[11px] text-emerald-300 mt-2 hidden"></p>
+
+          <div class="mt-3">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-[11px] font-bold text-slate-400">Backups na nuvem</h4>
+              <button id="refreshBackups" class="text-[11px] text-slate-500 hover:text-slate-300 transition">Atualizar</button>
+            </div>
+            <div id="cloudBackupsList" class="space-y-2"></div>
+            <p id="cloudBackupsMsg" class="text-center text-[11px] text-slate-500 mt-1 hidden"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== PAUSA OBRIGATÓRIA (Pomodoro) =================== -->
+  <div id="breakOverlay" class="hidden fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/95 backdrop-blur-md">
+    <div class="text-center px-8">
+      <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-rose-300/80 mb-6">Pausa obrigatória</p>
+      <div class="relative mx-auto h-52 w-52 grid place-items-center mb-6">
+        <div class="breathe absolute inset-0 rounded-full bg-gradient-to-br from-rose-500/30 to-orange-400/30 ring-1 ring-rose-300/30"></div>
+        <div class="relative">
+          <div class="text-5xl font-black tabular-nums" id="breakCountdown">3:00</div>
+          <div class="text-xs text-slate-400 mt-1" id="breathHint">Inspire…</div>
+        </div>
+      </div>
+      <h2 class="text-xl font-black mb-1">Hora de descansar 🍅</h2>
+      <p class="text-sm text-slate-400 max-w-xs mx-auto">Levante, alongue, beba água e descanse os olhos. A tela volta sozinha quando a pausa terminar.</p>
+      <div class="mt-6 h-2 w-56 mx-auto overflow-hidden rounded-full bg-slate-800">
+        <div id="breakBar" class="h-full w-full rounded-full bg-gradient-to-r from-rose-400 to-orange-400 transition-[width] duration-1000 linear"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Camada de feedback (toasts de XP/combo) -->
+  <div id="fx" class="pointer-events-none fixed inset-0 z-50 overflow-hidden"></div>
+
+<script>
+(() => {
+  'use strict';
+
+  // ====== BANCO DE ERROS ======
+  // Vazio: você cadastra os seus próprios erros nas Configurações.
+  const ERROS_BASE = [];
+
+  // Sugestões de matéria no campo "Matéria" (autocomplete). Edite à vontade.
+  const SUBJECT_SUGGESTIONS = [
+    'Direito Administrativo',
+    'Direito Constitucional',
+    'Arquivologia',
+    'Recursos Materiais',
+    'Redação Oficial',
+    'Administração Geral e Pública',
+    'SEDF',
+  ];
+
+  // ====== PERSISTÊNCIA (LocalStorage) ======
+  const LS_ERRORS = 'revisaoTurbo.erros';
+  const LS_PREFS  = 'revisaoTurbo.prefs';
+  const LS_STATS  = 'revisaoTurbo.stats';
+  const LS_PROGRESS = 'revisaoTurbo.progress';
+  const LS_DELETED = 'revisaoTurbo.deletedKeys';
+  const DEL_TTL_MS = 180 * 24 * 60 * 60 * 1000; // 180 dias: depois disso, a "lápide" da exclusão pode ser descartada
+  let customErrors = [];               // erros adicionados pelo usuário
+  let prefs = { useExamples: true, sound: true, energy: 'media', dailyGoal: 20, filterTag: '', autoSpeak: false };
+  let stats = {};                      // { matéria: { correct, total } }
+  let progress = { date: '', today: 0, streak: 0, best: 0, goalMetDate: '', resetAt: 0 };
+  let deletedKeys = {};                 // "lápides" de exclusão: { ckey: tsDaExclusao } — evita que a nuvem ressuscite cards apagados
+
+  // ====== REPETIÇÃO ESPAÇADA ======
+  // intervalos em dias por nível (0 = recém-errado, volta logo)
+  const SR_DAYS = [0, 1, 2, 4, 7, 15, 30, 60];
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const LAPSE_MS = 10 * 60 * 1000;     // erro: volta em ~10 min (mesma sessão/dia)
+  const todayStr = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); };
+  const ymdToMs = (s) => { const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d).getTime(); };
+
+  function lsAvailable() {
+    try { localStorage.setItem('__t', '1'); localStorage.removeItem('__t'); return true; }
+    catch (e) { return false; }
+  }
+  function loadStorage() {
+    try {
+      const raw = localStorage.getItem(LS_ERRORS);
+      customErrors = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(customErrors)) customErrors = [];
+    } catch (e) { customErrors = []; }
+    // garante campos de SR em cada card
+    customErrors.forEach(e => {
+      if (typeof e.srLevel !== 'number') e.srLevel = 0;
+      if (typeof e.due !== 'number') e.due = 0;     // 0 = vencido (revisar já)
+      if (typeof e.ts !== 'number') e.ts = 0;
+    });
+    try {
+      const p = JSON.parse(localStorage.getItem(LS_PREFS) || '{}');
+      prefs = Object.assign({ useExamples: true, sound: true, energy: 'media', dailyGoal: 20, filterTag: '', autoSpeak: false }, p);
+    } catch (e) { prefs = { useExamples: true, sound: true, energy: 'media', dailyGoal: 20, filterTag: '', autoSpeak: false }; }
+    if (!ENERGY[prefs.energy]) prefs.energy = 'media';
+    if (!(prefs.dailyGoal > 0)) prefs.dailyGoal = 20;
+    try {
+      const s = JSON.parse(localStorage.getItem(LS_STATS) || '{}');
+      stats = (s && typeof s === 'object') ? s : {};
+    } catch (e) { stats = {}; }
+    try {
+      const pr = JSON.parse(localStorage.getItem(LS_PROGRESS) || '{}');
+      progress = Object.assign({ date: '', today: 0, streak: 0, best: 0, goalMetDate: '', resetAt: 0 }, pr);
+    } catch (e) { progress = { date: '', today: 0, streak: 0, best: 0, goalMetDate: '', resetAt: 0 }; }
+    try {
+      const dk = JSON.parse(localStorage.getItem(LS_DELETED) || '{}');
+      deletedKeys = (dk && typeof dk === 'object') ? dk : {};
+    } catch (e) { deletedKeys = {}; }
+    normalizeProgress();
+  }
+  // zera contagem do dia se virou o dia, e quebra a ofensiva se faltou mais de 1 dia
+  function normalizeProgress() {
+    const t = todayStr();
+    if (progress.date !== t) { progress.date = t; progress.today = 0; }
+    if (progress.goalMetDate) {
+      const diff = Math.round((ymdToMs(t) - ymdToMs(progress.goalMetDate)) / DAY_MS);
+      if (diff > 1) progress.streak = 0;   // perdeu um dia: ofensiva zera
+    } else {
+      progress.streak = 0;
+    }
+  }
+  function saveErrors() {
+    try { localStorage.setItem(LS_ERRORS, JSON.stringify(customErrors)); } catch (e) {}
+    if (!applyingRemote && typeof pushCloud === 'function') pushCloud();
+  }
+  function savePrefs() {
+    try { localStorage.setItem(LS_PREFS, JSON.stringify(prefs)); } catch (e) {}
+    if (!applyingRemote && typeof pushCloud === 'function') pushCloud();
+  }
+  function saveStats() {
+    try { localStorage.setItem(LS_STATS, JSON.stringify(stats)); } catch (e) {}
+    if (!applyingRemote && typeof pushCloud === 'function') pushCloud();
+  }
+  function saveProgress() {
+    try { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); } catch (e) {}
+    if (!applyingRemote && typeof pushCloud === 'function') pushCloud();
+  }
+  function recordAttempt(tag, correct) {
+    if (!stats[tag]) stats[tag] = { correct: 0, total: 0 };
+    stats[tag].total += 1;
+    if (correct) stats[tag].correct += 1;
+    saveStats();
+  }
+  // conta uma revisão para a meta do dia; comemora ao bater a meta
+  function recordDailyReview() {
+    normalizeProgress();
+    progress.today += 1;
+    if (progress.today >= prefs.dailyGoal && progress.goalMetDate !== progress.date) {
+      const y = new Date(ymdToMs(progress.date) - DAY_MS);
+      const yStr = y.getFullYear() + '-' + String(y.getMonth()+1).padStart(2,'0') + '-' + String(y.getDate()).padStart(2,'0');
+      progress.streak = (progress.goalMetDate === yStr) ? progress.streak + 1 : 1;
+      progress.goalMetDate = progress.date;
+      progress.best = Math.max(progress.best || 0, progress.streak);
+      goalReachedFx();
+    }
+    saveProgress();
+  }
+  // zera a ofensiva atual (ex.: depois de atualizar o banco de cards e querer recomeçar do zero).
+  // Mantém a melhor marca (recorde) intacta — só a ofensiva em andamento volta a 0.
+  function resetStreak() {
+    progress.streak = 0;
+    progress.goalMetDate = '';
+    progress.resetAt = Date.now();
+    saveProgress();
+    renderToday();
+  }
+  // atualiza o agendamento SR do card (por uid) após a revisão
+  function scheduleCard(uid, correct) {
+    const c = customErrors.find(e => e.uid === uid);
+    if (!c) return;
+    const now = Date.now();
+    if (correct) {
+      c.srLevel = Math.min((c.srLevel || 0) + 1, SR_DAYS.length - 1);
+      c.due = now + SR_DAYS[c.srLevel] * DAY_MS;
+    } else {
+      c.srLevel = 0;
+      c.due = now + LAPSE_MS;
+    }
+    c.ts = now;
+    saveErrors();
+  }
+  // quantos cards estão vencidos (opcionalmente filtrando por matéria)
+  function dueCount(tag) {
+    const now = Date.now();
+    return customErrors.filter(c => (c.due || 0) <= now && (!tag || c.tag === tag)).length;
+  }
+  // Monta a fonte de cartões (erros do usuário) com campos de SR
+  function buildSource() {
+    const base = prefs.useExamples ? ERROS_BASE.map(e => ({ ...e, custom: false, srLevel: 0, due: 0, ts: 0 })) : [];
+    const mine = customErrors.map(e => ({ tag: e.tag, q: e.q, a: e.a, custom: true, uid: e.uid, srLevel: e.srLevel || 0, due: e.due || 0, ts: e.ts || 0 }));
+    return base.concat(mine);
+  }
+
+  // ====== ÁUDIO (Web Audio API — sem arquivos) ======
+  let audioCtx = null;
+  function ac() {
+    if (!audioCtx) {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (AC) audioCtx = new AC();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+  // Toca uma nota com envelope suave (evita estalos)
+  function note(freq, startOffset, dur, type = 'triangle', peak = 0.22) {
+    const ctx = ac(); if (!ctx) return;
+    const t0 = ctx.currentTime + startOffset;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, t0);
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(peak, t0 + 0.012);   // ataque
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);   // decaimento
+    osc.connect(gain).connect(ctx.destination);
+    osc.start(t0);
+    osc.stop(t0 + dur + 0.02);
+  }
+  function glide(f1, f2, startOffset, dur, type = 'sawtooth', peak = 0.18) {
+    const ctx = ac(); if (!ctx) return;
+    const t0 = ctx.currentTime + startOffset;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(f1, t0);
+    osc.frequency.exponentialRampToValueAtTime(f2, t0 + dur);
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(peak, t0 + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    osc.connect(gain).connect(ctx.destination);
+    osc.start(t0);
+    osc.stop(t0 + dur + 0.02);
+  }
+
+  const SFX = {
+    correct() {            // acerto: arpejo alegre subindo (dó-mi-sol)
+      if (!prefs.sound) return;
+      note(523.25, 0, 0.12, 'triangle', 0.22);
+      note(659.25, 0.09, 0.12, 'triangle', 0.22);
+      note(783.99, 0.18, 0.18, 'triangle', 0.24);
+    },
+    wrong() {              // erro: descida grave curta
+      if (!prefs.sound) return;
+      glide(196, 110, 0, 0.28, 'sawtooth', 0.16);
+      note(146.83, 0.04, 0.18, 'square', 0.10);
+    },
+    goal() {               // meta concluída: fanfarra ascendente + brilho
+      if (!prefs.sound) return;
+      const seq = [523.25, 659.25, 783.99, 1046.5];
+      seq.forEach((f, i) => note(f, i * 0.1, 0.22, 'triangle', 0.24));
+      note(1318.5, 0.42, 0.3, 'sine', 0.18); // sininho no fim
+    },
+    timeUp() {             // tempo esgotado: alarme de urgência
+      if (!prefs.sound) return;
+      note(880, 0, 0.12, 'square', 0.16);
+      note(880, 0.16, 0.12, 'square', 0.16);
+    },
+    combo(n) {             // combo alto: pinguinho extra agudo
+      if (!prefs.sound) return;
+      const f = Math.min(880 + n * 60, 1600);
+      note(f, 0, 0.1, 'sine', 0.14);
+    }
+  };
+
+  // ====== ESTADO ======
+  const META = { combo: 0, maxCombo: 0, xp: 0, level: 1, mastered: 0, done: 0 };
+  const xpGoal = (lvl) => 100 + (lvl - 1) * 60; // cresce por nível
+  let deckCards = [];   // [{...erro, revealed:false}]
+  let active = null;    // elemento DOM do card do topo
+
+  // ====== NÍVEL DE ENERGIA ======
+  const ENERGY = {
+    baixa: { label: 'Baixa', emoji: '🔋', cards: 5,  timer: 45, desc: 'Poucos cards e ritmo calmo (45s por card).' },
+    media: { label: 'Média', emoji: '⚡', cards: 10, timer: 30, desc: 'Equilíbrio: 10 cards e 30s por card.' },
+    alta:  { label: 'Alta',  emoji: '🚀', cards: 20, timer: 20, desc: 'Muitos cards e ritmo acelerado (20s por card).' },
+  };
+  let cardCount = ENERGY.media.cards;
+
+  // ====== CRONÔMETRO ======
+  let TIMER_SECONDS = 30;                 // definido pelo nível de energia
+  const RING_LEN = 100.53; // circunferência do anel (2πr, r=16)
+  let timerId = null;
+  let timeLeft = TIMER_SECONDS;
+
+  // ====== ELEMENTOS ======
+  const $ = (id) => document.getElementById(id);
+  const deckEl = $('deck'), fxEl = $('fx');
+
+  // ====== INICIALIZAÇÃO ======
+  let reviewAhead = false;   // true = revisar adiantado (ignora "vencido")
+  function init() {
+    META.combo = 0; META.maxCombo = 0; META.xp = 0; META.level = 1; META.mastered = 0; META.done = 0;
+    const now = Date.now();
+    const source = buildSource();
+    let pool = source.map((e, i) => ({ ...e, id: i, revealed: false }));
+    // filtro por matéria (vazio = todas)
+    if (prefs.filterTag) pool = pool.filter(c => c.tag === prefs.filterTag);
+    if (reviewAhead) {
+      // adiantado: pega os de vencimento mais próximo
+      pool.sort((a, b) => (a.due || 0) - (b.due || 0));
+    } else {
+      // repetição espaçada: só os vencidos, embaralhados (misturando matérias)
+      pool = pool.filter(c => (c.due || 0) <= now);
+      shuffle(pool);
+    }
+    deckCards = pool.slice(0, cardCount);   // limita pela energia escolhida
+    $('finishScreen').classList.add('hidden');
+    stopTimer();
+    deckEl.innerHTML = '';
+
+    if (deckCards.length === 0) {
+      // estado vazio: nada pra revisar
+      $('emptyDeck').classList.remove('hidden');
+      $('actions').classList.add('hidden');
+      const rb = $('rouletteBtn'); if (rb) rb.disabled = true;
+      syncStats(true);
+      return;
+    }
+
+    $('emptyDeck').classList.add('hidden');
+    $('actions').classList.remove('hidden');
+    const rb = $('rouletteBtn'); if (rb) rb.disabled = false;
+    renderDeck();
+    syncStats(true);
+  }
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = (Math.random() * (i + 1)) | 0;
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+  }
+
+  // ====== RENDER DO BARALHO (apenas um card por vez) ======
+  function renderDeck() {
+    deckEl.querySelectorAll('.swipe-card').forEach(n => n.remove());
+    if (!deckCards.length) return;
+    const el = buildCard(deckCards[0]);   // só o card do topo, sem transparência atrás
+    deckEl.appendChild(el);
+    active = el;
+    attachDrag(active);
+    startTimer();
+    if (prefs.autoSpeak) speakCard(deckCards[0]);   // leitura automática (opcional)
+  }
+
+  // ====== TIMER REGRESSIVO ======
+  function startTimer() {
+    stopTimer();
+    if (!active) return;
+    timeLeft = TIMER_SECONDS;
+    paintTimer(active, timeLeft, false);
+    active.classList.remove('time-up');
+    timerId = setInterval(() => {
+      timeLeft -= 1;
+      const top = deckEl.querySelector('.swipe-card[data-depth="0"]');
+      if (!top) return stopTimer();
+      if (timeLeft <= 0) {
+        paintTimer(top, 0, true);
+        top.classList.add('time-up');           // pisca em vermelho
+        SFX.timeUp();
+        stopTimer();
+        return;
+      }
+      paintTimer(top, timeLeft, false);
+    }, 1000);
+  }
+
+  function stopTimer() {
+    if (timerId) { clearInterval(timerId); timerId = null; }
+  }
+
+  function paintTimer(cardEl, secs, expired) {
+    const ring = cardEl.querySelector('[data-timer-ring]');
+    const num = cardEl.querySelector('[data-timer-num]');
+    if (!ring || !num) return;
+    const frac = Math.max(0, secs) / TIMER_SECONDS;
+    ring.style.strokeDashoffset = String(RING_LEN * (1 - frac));
+    num.textContent = expired ? '0' : secs;
+    // cor muda conforme aperta o tempo: verde → âmbar → vermelho
+    let color = '#34d399', txt = 'text-emerald-300';
+    if (expired || secs <= 5) { color = '#f43f5e'; txt = 'text-rose-400'; }
+    else if (secs <= 12) { color = '#fbbf24'; txt = 'text-amber-300'; }
+    ring.setAttribute('stroke', color);
+    num.className = 'absolute inset-0 grid place-items-center text-[12px] font-extrabold tabular-nums ' + txt;
+  }
+
+  function buildCard(card) {
+    const el = document.createElement('article');
+    el.className = 'swipe-card absolute inset-0 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 ring-1 ring-white/10 shadow-2xl shadow-black/50 p-6 flex flex-col animate-floatIn';
+    el.dataset.depth = '0';
+    el.dataset.id = card.id;
+    el.style.zIndex = '50';
+
+    el.innerHTML = `
+      <!-- carimbos de swipe -->
+      <div data-stamp="right" class="stamp pointer-events-none absolute top-6 left-6 rotate-[-14deg] rounded-xl border-4 border-emerald-400 px-3 py-1 text-xl font-black text-emerald-400 opacity-0 transition-opacity">ENTENDI</div>
+      <div data-stamp="left" class="stamp pointer-events-none absolute top-6 right-6 rotate-[14deg] rounded-xl border-4 border-rose-400 px-3 py-1 text-xl font-black text-rose-400 opacity-0 transition-opacity">ERREI</div>
+
+      <div class="flex items-center justify-between mb-3">
+        <span class="rounded-full bg-violet-500/15 text-violet-300 text-[11px] font-bold px-3 py-1 ring-1 ring-violet-400/20">${card.tag}</span>
+        <div class="flex items-center gap-2">
+          <!-- Ouvir o card -->
+          <button data-speak title="Ouvir" class="grid h-9 w-9 place-items-center rounded-full bg-white/5 ring-1 ring-white/10 text-base hover:bg-white/10 active:scale-90 transition">🔉</button>
+          <!-- Cronômetro regressivo -->
+          <div data-timer-wrap class="relative h-9 w-9">
+            <svg class="h-9 w-9 -rotate-90" viewBox="0 0 36 36">
+              <circle cx="18" cy="18" r="16" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="3"></circle>
+              <circle data-timer-ring cx="18" cy="18" r="16" fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round"
+                      stroke-dasharray="100.53" stroke-dashoffset="0" style="transition: stroke-dashoffset 1s linear, stroke .3s linear;"></circle>
+            </svg>
+            <span data-timer-num class="absolute inset-0 grid place-items-center text-[12px] font-extrabold tabular-nums text-emerald-300">${TIMER_SECONDS}</span>
+          </div>
+          <span class="text-[11px] text-slate-500 font-medium">Erro #${card.id + 1}</span>
+        </div>
+      </div>
+
+      <div class="flex-1 flex flex-col justify-center">
+        <p class="text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2">A questão</p>
+        <h2 class="text-xl font-bold leading-snug text-slate-100">${card.q}</h2>
+
+        <div data-answer class="mt-5 overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-out">
+          <div class="rounded-2xl bg-emerald-400/5 ring-1 ring-emerald-400/20 p-4">
+            <p class="text-[11px] uppercase tracking-widest text-emerald-400/80 font-bold mb-1.5">A resposta ✦</p>
+            <p class="text-[15px] leading-relaxed text-slate-200">${card.a}</p>
+          </div>
+        </div>
+      </div>
+
+      <button data-reveal class="mt-5 w-full rounded-2xl bg-white/5 ring-1 ring-white/10 py-3.5 font-bold text-slate-100 hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-2">
+        <span>👁️</span> Revelar Resposta
+      </button>
+    `;
+
+    const revealBtn = el.querySelector('[data-reveal]');
+    revealBtn.addEventListener('click', () => revealAnswer(el, card));
+    const speakBtn = el.querySelector('[data-speak]');
+    if (speakBtn) {
+      if (!ttsOK) speakBtn.style.display = 'none';
+      speakBtn.addEventListener('click', () => speakCard(card));
+    }
+    return el;
+  }
+
+  function revealAnswer(el, card) {
+    if (card.revealed) return;
+    card.revealed = true;
+    const ans = el.querySelector('[data-answer]');
+    const btn = el.querySelector('[data-reveal]');
+    ans.style.maxHeight = '320px';
+    ans.style.opacity = '1';
+    btn.innerHTML = '<span>✅</span> Resposta revelada';
+    btn.classList.add('opacity-60');
+    btn.disabled = true;
+    stopTimer();                                          // para a contagem de 30s ao virar o card (o Pomodoro de 15min segue normal)
+    if (prefs.autoSpeak) speak('Resposta: ' + card.a);   // lê a resposta ao revelar
+  }
+
+  function updateDeckUI() {
+    // garante que apenas o topo capture o drag e o reveal
+    deckEl.querySelectorAll('.swipe-card').forEach(el => {
+      const top = el.dataset.depth === '0';
+      el.style.pointerEvents = top ? 'auto' : 'none';
+    });
+  }
+
+  // ====== DRAG / SWIPE ======
+  function attachDrag(el) {
+    let startX = 0, startY = 0, dx = 0, dy = 0, dragging = false;
+    const stampR = el.querySelector('[data-stamp="right"]');
+    const stampL = el.querySelector('[data-stamp="left"]');
+
+    const onDown = (e) => {
+      dragging = true;
+      const p = point(e);
+      startX = p.x; startY = p.y;
+      el.style.transition = 'none';
+    };
+    const onMove = (e) => {
+      if (!dragging) return;
+      const p = point(e);
+      dx = p.x - startX; dy = p.y - startY;
+      const rot = dx / 18;
+      el.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg)`;
+      const k = Math.min(Math.abs(dx) / 110, 1);
+      stampR.style.opacity = dx > 0 ? k : 0;
+      stampL.style.opacity = dx < 0 ? k : 0;
+    };
+    const onUp = () => {
+      if (!dragging) return;
+      dragging = false;
+      el.style.transition = 'transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s';
+      const threshold = 95;
+      if (dx > threshold) commitSwipe(el, 'right');
+      else if (dx < -threshold) commitSwipe(el, 'left');
+      else {
+        el.style.transform = 'translate(0,0) rotate(0)';
+        stampR.style.opacity = 0; stampL.style.opacity = 0;
+      }
+      dx = 0; dy = 0;
+    };
+
+    el.addEventListener('pointerdown', onDown);
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+    // limpa listeners globais quando o card sai
+    el._cleanup = () => {
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onUp);
+    };
+  }
+
+  function point(e) {
+    if (e.touches && e.touches[0]) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    return { x: e.clientX, y: e.clientY };
+  }
+
+  // ====== AÇÕES ======
+  function commitSwipe(el, dir) {
+    if (!el || el.dataset.done) return;
+    el.dataset.done = '1';
+    stopTimer();
+    el.classList.remove('time-up');
+    if (el._cleanup) el._cleanup();
+
+    const flyX = dir === 'right' ? window.innerWidth : -window.innerWidth;
+    const rot = dir === 'right' ? 22 : -22;
+    el.style.transform = `translate(${flyX}px, -40px) rotate(${rot}deg)`;
+    el.style.opacity = '0';
+
+    const cardData = deckCards.find(c => c.id == el.dataset.id);
+    if (cardData) {
+      recordAttempt(cardData.tag, dir === 'right');
+      if (cardData.uid) scheduleCard(cardData.uid, dir === 'right'); // repetição espaçada
+    }
+    recordDailyReview();   // conta para a meta do dia + ofensiva
+    stopSpeak();           // para a leitura em voz alta, se estiver tocando
+
+    if (dir === 'right') {
+      // Já entendi
+      META.combo += 1;
+      META.maxCombo = Math.max(META.maxCombo, META.combo);
+      META.mastered += 1;
+      const base = 15;
+      const bonus = Math.min(META.combo - 1, 10) * 3; // bônus de combo
+      const gain = base + bonus;
+      addXp(gain);
+      SFX.correct();
+      floatToast(`+${gain} XP`, 'emerald', dir);
+      if (META.combo >= 2) { SFX.combo(META.combo); floatToast(`Combo x${META.combo} 🔥`, 'amber', dir, 280); }
+      // remove do baralho de vez
+      deckCards = deckCards.filter(c => c.id != el.dataset.id);
+    } else {
+      // Ainda erro -> quebra combo e devolve o card pro fundo
+      SFX.wrong();
+      if (META.combo > 0) floatToast('Combo perdido 💤', 'rose', dir);
+      META.combo = 0;
+      const idx = deckCards.findIndex(c => c.id == el.dataset.id);
+      if (idx > -1) {
+        const [c] = deckCards.splice(idx, 1);
+        c.revealed = false;
+        deckCards.push(c); // volta pro fim
+      }
+    }
+
+    META.done += 1;
+    syncStats();
+
+    setTimeout(() => {
+      el.remove();
+      if (deckCards.length === 0) return finish();
+      renderDeck();
+    }, 330);
+  }
+
+  function triggerSwipe(dir) {
+    if (onBreak) return;
+    const top = deckEl.querySelector('.swipe-card[data-depth="0"]');
+    if (top && !top.dataset.done) {
+      top.style.transition = 'transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s';
+      commitSwipe(top, dir);
+    }
+  }
+
+  // ====== XP / NÍVEL ======
+  function addXp(amount) {
+    META.xp += amount;
+    let goal = xpGoal(META.level);
+    while (META.xp >= goal) {
+      META.xp -= goal;
+      META.level += 1;
+      goal = xpGoal(META.level);
+      levelUpFx();
+    }
+  }
+
+  function syncStats(instant) {
+    const goal = xpGoal(META.level);
+    const pct = Math.max(0, Math.min(100, (META.xp / goal) * 100));
+    const bar = $('xpBar');
+    if (instant) bar.style.transition = 'none';
+    bar.style.width = pct + '%';
+    if (instant) requestAnimationFrame(() => bar.style.transition = '');
+
+    $('xpText').textContent = META.xp;
+    $('xpGoalText').textContent = goal;
+    $('levelText').textContent = META.level;
+    $('levelBadge').textContent = META.level;
+    $('comboCount').textContent = META.combo;
+    $('doneCount').textContent = META.done;
+    $('leftCount').textContent = deckCards.length;
+    $('masteredCount').textContent = META.mastered;
+
+    // combo box pulsa quando ativo
+    const cb = $('comboBox'), flame = $('comboFlame');
+    if (META.combo >= 2) {
+      cb.classList.add('ring-amber-400/40', 'bg-amber-400/10');
+      cb.style.transform = 'scale(1.06)';
+      flame.style.filter = `drop-shadow(0 0 ${Math.min(META.combo * 2, 14)}px rgba(251,191,36,.9))`;
+      setTimeout(() => cb.style.transform = 'scale(1)', 160);
+    } else {
+      cb.classList.remove('ring-amber-400/40', 'bg-amber-400/10');
+      flame.style.filter = 'grayscale(1) opacity(.5)';
+    }
+  }
+
+  // ====== EFEITOS VISUAIS ======
+  function floatToast(text, color, dir, delay = 0) {
+    const colors = {
+      emerald: 'text-emerald-300', amber: 'text-amber-300',
+      rose: 'text-rose-300', violet: 'text-violet-300'
+    };
+    setTimeout(() => {
+      const t = document.createElement('div');
+      t.className = `absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-black ${colors[color] || 'text-white'} drop-shadow-lg`;
+      t.textContent = text;
+      t.style.transition = 'transform .9s ease-out, opacity .9s ease-out';
+      fxEl.appendChild(t);
+      requestAnimationFrame(() => {
+        t.style.transform = `translate(-50%, -160%) scale(1.2)`;
+        t.style.opacity = '0';
+      });
+      setTimeout(() => t.remove(), 950);
+    }, delay);
+  }
+
+  function levelUpFx() {
+    const banner = document.createElement('div');
+    banner.className = 'absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 text-center';
+    banner.innerHTML = `<div class="animate-[popIn_.5s] text-4xl font-black text-amber-300 drop-shadow-[0_0_20px_rgba(251,191,36,.8)]">NÍVEL ${META.level}! ⭐</div>`;
+    banner.style.transition = 'opacity .6s ease-out, transform .6s ease-out';
+    fxEl.appendChild(banner);
+    SFX.goal();
+    confetti();
+    setTimeout(() => { banner.style.opacity = '0'; banner.style.transform = 'translate(-50%,-90%)'; }, 900);
+    setTimeout(() => banner.remove(), 1500);
+  }
+
+  function confetti() {
+    const cols = ['#34d399', '#22d3ee', '#a78bfa', '#fbbf24', '#fb7185'];
+    for (let i = 0; i < 28; i++) {
+      const p = document.createElement('div');
+      const size = 6 + Math.random() * 6;
+      p.style.cssText = `position:absolute;left:50%;top:33%;width:${size}px;height:${size}px;background:${cols[i % cols.length]};border-radius:2px;`;
+      fxEl.appendChild(p);
+      const ang = Math.random() * Math.PI * 2;
+      const dist = 80 + Math.random() * 160;
+      const tx = Math.cos(ang) * dist;
+      const ty = Math.sin(ang) * dist - 40;
+      p.animate([
+        { transform: 'translate(0,0) rotate(0)', opacity: 1 },
+        { transform: `translate(${tx}px,${ty + 220}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+      ], { duration: 1100 + Math.random() * 500, easing: 'cubic-bezier(.2,.8,.3,1)' });
+      setTimeout(() => p.remove(), 1700);
+    }
+  }
+
+  // comemoração ao bater a meta diária
+  function goalReachedFx() {
+    const banner = document.createElement('div');
+    banner.className = 'absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 text-center';
+    banner.innerHTML = `<div class="animate-[popIn_.5s] text-3xl font-black text-emerald-300 drop-shadow-[0_0_20px_rgba(251,191,36,.8)]">META DO DIA! 🔥<br><span class="text-xl text-amber-300">${progress.streak} dia(s) seguidos</span></div>`;
+    banner.style.transition = 'opacity .6s ease-out, transform .6s ease-out';
+    fxEl.appendChild(banner);
+    SFX.goal();
+    confetti();
+    setTimeout(() => { banner.style.opacity = '0'; banner.style.transform = 'translate(-50%,-90%)'; }, 1300);
+    setTimeout(() => banner.remove(), 1900);
+  }
+
+  // ====== OUVIR O CARD (text-to-speech, sem arquivos) ======
+  const ttsOK = ('speechSynthesis' in window);
+  let ptVoice = null;
+  function pickVoice() {
+    if (!ttsOK) return;
+    const vs = window.speechSynthesis.getVoices() || [];
+    ptVoice = vs.find(v => /pt[-_]?BR/i.test(v.lang)) || vs.find(v => /^pt/i.test(v.lang)) || null;
+  }
+  if (ttsOK) {
+    pickVoice();
+    window.speechSynthesis.onvoiceschanged = pickVoice;
+  }
+  function stopSpeak() { if (ttsOK) { try { window.speechSynthesis.cancel(); } catch (e) {} } }
+  function speak(text) {
+    if (!ttsOK || !text) return;
+    stopSpeak();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'pt-BR';
+    if (ptVoice) u.voice = ptVoice;
+    u.rate = 1; u.pitch = 1;
+    try { window.speechSynthesis.speak(u); } catch (e) {}
+  }
+  // lê o conteúdo visível do card: pergunta (e resposta, se revelada)
+  function speakCard(card) {
+    if (!card) return;
+    const txt = card.revealed ? (card.q + '. Resposta: ' + card.a) : card.q;
+    speak(txt);
+  }
+
+  // ====== FIM ======
+  function finish() {
+    stopTimer();
+    $('actions').classList.add('hidden');
+    $('finishScreen').classList.remove('hidden');
+    $('finalXp').textContent = totalXpEarned();
+    $('finalCombo').textContent = META.maxCombo;
+    $('finalMastered').textContent = META.mastered;
+    SFX.goal();
+    confetti();
+  }
+
+  function totalXpEarned() {
+    // soma o XP acumulado em todos os níveis + nível atual
+    let total = META.xp;
+    for (let l = 1; l < META.level; l++) total += xpGoal(l);
+    return total;
+  }
+
+  // ====== ROLETA DO ERRO ======
+  let rouletteSpinning = false;
+  function spinRoulette() {
+    if (rouletteSpinning || deckCards.length === 0) return;
+    rouletteSpinning = true;
+    stopTimer();
+
+    const icon = $('rouletteIcon');
+    const btn = $('rouletteBtn');
+    icon.animate(
+      [{ transform: 'rotate(0)' }, { transform: 'rotate(1440deg)' }],
+      { duration: 900, easing: 'cubic-bezier(.15,.85,.25,1)' }
+    );
+    btn.disabled = true;
+
+    // "borra" o card do topo durante o sorteio
+    const top = deckEl.querySelector('.swipe-card[data-depth="0"]');
+    if (top) {
+      top.style.transition = 'transform .25s, filter .25s, opacity .25s';
+      top.style.filter = 'blur(6px)';
+      top.style.opacity = '.4';
+      top.style.transform = 'scale(.95)';
+    }
+
+    // troca rápida de matéria para dar a sensação de roleta girando
+    let ticks = 0;
+    const flicker = setInterval(() => {
+      ticks++;
+      shuffle(deckCards);
+      const tagEl = deckEl.querySelector('.swipe-card[data-depth="0"] [class*="text-violet-300"]');
+      if (tagEl && deckCards[0]) tagEl.textContent = deckCards[0].tag;
+      if (ticks >= 8) {
+        clearInterval(flicker);
+        shuffle(deckCards);
+        deckCards.forEach(c => c.revealed = false);
+        deckEl.querySelectorAll('.swipe-card').forEach(n => n.remove());
+        renderDeck();                 // reinicia o timer também
+        floatToast('Embaralhado! 🎲', 'violet', 'right');
+        rouletteSpinning = false;
+        btn.disabled = false;
+      }
+    }, 90);
+  }
+
+  // ====== CONFIGURAÇÕES / FORMULÁRIO ======
+  const uid = () => 'e' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  // chave de conteúdo (matéria + pergunta) — identidade de um card entre aparelhos, usada tanto
+  // para não duplicar quanto para lembrar (via "lápide") que um card foi apagado de propósito
+  const ckey = (e) => ((e.tag || '') + '§' + (e.q || '')).trim().toLowerCase();
+  function pruneDeletedKeys() {
+    const cutoff = Date.now() - DEL_TTL_MS;
+    Object.keys(deletedKeys).forEach(k => { if ((deletedKeys[k] || 0) < cutoff) delete deletedKeys[k]; });
+  }
+  function saveDeletedKeys() {
+    pruneDeletedKeys();
+    try { localStorage.setItem(LS_DELETED, JSON.stringify(deletedKeys)); } catch (e) {}
+  }
+
+  function openSettings() {
+    stopTimer();
+    renderCustomList();
+    refreshTagSuggestions();
+    if ($('autoSpeak')) $('autoSpeak').checked = !!prefs.autoSpeak;
+    $('settingsModal').classList.remove('hidden');
+  }
+  function closeSettings() {
+    $('settingsModal').classList.add('hidden');
+    resetForm();
+    if (!playing) { renderSubjectFilter(); renderToday(); renderChart(); }   // atualiza o menu
+  }
+
+  function openSync() {
+    stopTimer();
+    updateCloudUI();
+    $('syncModal').classList.remove('hidden');
+    loadCloudBackups();
+  }
+  function closeSync() {
+    $('syncModal').classList.add('hidden');
+  }
+
+  function resetForm() {
+    $('errorForm').reset();
+    $('fEditId').value = '';
+    $('saveError').textContent = 'Salvar erro';
+    $('cancelEdit').classList.add('hidden');
+  }
+
+  // normaliza texto (tira acentos e caixa) para a busca casar mesmo sem acento
+  function normSearch(s) {
+    return (s || '').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  // destaca o termo buscado dentro de um texto já escapado
+  function highlight(text, q) {
+    const safe = escapeHtml(text);
+    if (!q) return safe;
+    const nText = normSearch(text), nq = normSearch(q);
+    let out = '', last = 0, idx;
+    // mapeia posições no texto original usando a versão normalizada (mesmo tamanho de string)
+    while ((idx = nText.indexOf(nq, last)) !== -1) {
+      out += escapeHtml(text.slice(last, idx)) +
+             '<mark class="bg-amber-400/30 text-amber-200 rounded px-0.5">' +
+             escapeHtml(text.slice(idx, idx + nq.length)) + '</mark>';
+      last = idx + nq.length;
+    }
+    out += escapeHtml(text.slice(last));
+    return out;
+  }
+
+  function renderCustomList() {
+    const list = $('customList');
+    list.innerHTML = '';
+    $('customCount').textContent = customErrors.length;
+
+    const q = normSearch(($('searchCards') && $('searchCards').value) || '').trim();
+    const filtered = q
+      ? customErrors.filter(e => normSearch(e.tag + ' ' + e.q + ' ' + e.a).includes(q))
+      : customErrors.slice();
+
+    // dicas de estado vazio (sem cards x busca sem resultado)
+    $('emptyHint').classList.toggle('hidden', customErrors.length > 0);
+    const searchEmpty = $('searchEmpty');
+    if (searchEmpty) searchEmpty.classList.toggle('hidden', !(q && customErrors.length > 0 && filtered.length === 0));
+    const clearBtn = $('searchClear');
+    if (clearBtn) clearBtn.classList.toggle('hidden', !q);
+
+    filtered.slice().reverse().forEach((e) => {
+      const row = document.createElement('div');
+      row.className = 'rounded-xl bg-slate-800/60 ring-1 ring-white/5 p-3';
+      row.innerHTML = `
+        <div class="flex items-start justify-between gap-2">
+          <div class="min-w-0">
+            <span class="inline-block rounded-full bg-violet-500/15 text-violet-300 text-[10px] font-bold px-2 py-0.5 ring-1 ring-violet-400/20 mb-1">${highlight(e.tag, q)}</span>
+            <p class="text-sm font-semibold text-slate-100 truncate">${highlight(e.q, q)}</p>
+            <p class="text-[12px] text-slate-400 line-clamp-2">${highlight(e.a, q)}</p>
+          </div>
+          <div class="flex flex-col gap-1 shrink-0">
+            <button data-edit="${e.uid}" title="Editar" class="grid h-7 w-7 place-items-center rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 active:scale-90 transition">✏️</button>
+            <button data-del="${e.uid}" title="Excluir" class="grid h-7 w-7 place-items-center rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 active:scale-90 transition">🗑️</button>
+          </div>
+        </div>`;
+      list.appendChild(row);
+    });
+
+    list.querySelectorAll('[data-del]').forEach(b =>
+      b.addEventListener('click', () => deleteError(b.dataset.del)));
+    list.querySelectorAll('[data-edit]').forEach(b =>
+      b.addEventListener('click', () => startEdit(b.dataset.edit)));
+  }
+
+  function refreshTagSuggestions() {
+    const tags = new Set([...SUBJECT_SUGGESTIONS, ...customErrors.map(e => e.tag)]);
+    $('tagSuggestions').innerHTML = [...tags].map(t => `<option value="${escapeHtml(t)}">`).join('');
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => (
+      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+    ));
+  }
+
+  function submitError(ev) {
+    ev.preventDefault();
+    const tag = $('fTag').value.trim();
+    const q = $('fQuestion').value.trim();
+    const a = $('fAnswer').value.trim();
+    if (!tag || !q || !a) return;
+    const editId = $('fEditId').value;
+
+    if (editId) {
+      const idx = customErrors.findIndex(e => e.uid === editId);
+      // atualiza o carimbo de data (ts) na edição — sem isso, a sincronização entre
+      // aparelhos não sabe que este card mudou e a edição não se propaga para o outro aparelho.
+      if (idx > -1) customErrors[idx] = { ...customErrors[idx], tag, q, a, ts: Date.now() };
+    } else {
+      customErrors.push({ uid: uid(), tag, q, a, srLevel: 0, due: 0, ts: Date.now() });
+    }
+    saveErrors();
+    resetForm();
+    renderCustomList();
+    refreshTagSuggestions();
+    flashSaved();
+  }
+
+  function startEdit(id) {
+    const e = customErrors.find(x => x.uid === id);
+    if (!e) return;
+    $('fTag').value = e.tag;
+    $('fQuestion').value = e.q;
+    $('fAnswer').value = e.a;
+    $('fEditId').value = e.uid;
+    $('saveError').textContent = 'Atualizar erro';
+    $('cancelEdit').classList.remove('hidden');
+    $('fTag').focus();
+  }
+
+  function deleteError(id) {
+    const e = customErrors.find(x => x.uid === id);
+    if (e) { deletedKeys[ckey(e)] = Date.now(); saveDeletedKeys(); }
+    customErrors = customErrors.filter(e => e.uid !== id);
+    saveErrors();
+    renderCustomList();
+    refreshTagSuggestions();
+  }
+
+  function clearAllErrors() {
+    if (customErrors.length === 0) return;
+    const now = Date.now();
+    customErrors.forEach(e => { deletedKeys[ckey(e)] = now; });
+    saveDeletedKeys();
+    customErrors = [];
+    saveErrors();
+    renderCustomList();
+    refreshTagSuggestions();
+  }
+
+  // ====== IMPORTAR VÁRIAS DE UMA VEZ (colar JSON ou texto) ======
+  function bulkMsg(text, kind) {
+    const el = $('bulkMsg');
+    el.textContent = text;
+    el.classList.remove('hidden', 'text-emerald-300', 'text-rose-300');
+    el.classList.add(kind === 'rose' ? 'text-rose-300' : 'text-emerald-300');
+  }
+  // retorna array de cards {tag,q,a}, ou null se for JSON malformado
+  function parseBulk(text) {
+    text = (text || '').trim();
+    if (!text) return [];
+    const norm = c => ({
+      tag: (c.tag || c.materia || c['matéria'] || c.assunto || 'Geral').toString().trim() || 'Geral',
+      q: (c.q || c.pergunta || c.question || c.frente || '').toString().trim(),
+      a: (c.a || c.resposta || c.answer || c.verso || '').toString().trim(),
+    });
+    // tolera bloco de código markdown e texto ao redor: extrai o array/objeto JSON
+    let jsonText = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+    if (jsonText[0] !== '[' && jsonText[0] !== '{') {
+      const i = jsonText.indexOf('['), j = jsonText.lastIndexOf(']');
+      if (i > -1 && j > i) jsonText = jsonText.slice(i, j + 1);   // pega o array de dentro do texto
+    }
+    if (jsonText[0] === '[' || jsonText[0] === '{') {
+      let data;
+      try { data = JSON.parse(jsonText); } catch (e) { return null; }
+      const arr = Array.isArray(data) ? data : (Array.isArray(data.errors) ? data.errors : []);
+      return arr.map(norm).filter(c => c.q && c.a);
+    }
+    // formato por linhas: Matéria | Pergunta | Resposta  (ou Pergunta | Resposta)
+    const cards = [];
+    text.split(/\r?\n/).forEach(line => {
+      line = line.trim();
+      if (!line) return;
+      const p = line.split('|').map(s => s.trim());
+      if (p.length >= 3) cards.push({ tag: p[0] || 'Geral', q: p[1], a: p.slice(2).join(' | ') });
+      else if (p.length === 2) cards.push({ tag: 'Geral', q: p[0], a: p[1] });
+    });
+    return cards.filter(c => c.q && c.a);
+  }
+  function doBulkImport() {
+    const parsed = parseBulk($('bulkText').value);
+    if (parsed === null) return bulkMsg('JSON inválido — confira o texto colado.', 'rose');
+    if (!parsed.length) return bulkMsg('Nada reconhecido. Use JSON ou "Matéria | Pergunta | Resposta".', 'rose');
+    // evita duplicar: ignora questões com mesma matéria+pergunta já existentes
+    const have = new Set(customErrors.map(e => (e.tag + '§' + e.q).toLowerCase()));
+    let added = 0, dup = 0;
+    parsed.forEach(c => {
+      const key = (c.tag + '§' + c.q).toLowerCase();
+      if (have.has(key)) { dup++; return; }
+      have.add(key);
+      customErrors.push({ uid: uid(), tag: c.tag, q: c.q, a: c.a, srLevel: 0, due: 0, ts: Date.now() });
+      added++;
+    });
+    if (added) { saveErrors(); renderCustomList(); refreshTagSuggestions(); $('bulkText').value = ''; }
+    bulkMsg(`${added} questão(ões) importada(s)` + (dup ? `, ${dup} já existiam` : '') + ' ✓', added ? 'ok' : 'rose');
+  }
+
+  function flashSaved() {
+    const btn = $('saveError');
+    const prev = btn.textContent;
+    btn.textContent = 'Salvo! ✓';
+    btn.classList.add('from-emerald-500', 'to-teal-500');
+    setTimeout(() => { btn.textContent = prev; btn.classList.remove('from-emerald-500', 'to-teal-500'); }, 900);
+  }
+
+  // ====== BACKUP: exportar / importar JSON ======
+  function backupMsg(text, color) {
+    const el = $('backupMsg');
+    el.textContent = text;
+    el.classList.remove('hidden', 'text-emerald-300', 'text-rose-300');
+    el.classList.add(color === 'rose' ? 'text-rose-300' : 'text-emerald-300');
+    clearTimeout(backupMsg._t);
+    backupMsg._t = setTimeout(() => el.classList.add('hidden'), 4000);
+  }
+
+  function exportData() {
+    const data = {
+      app: 'revisao-turbo', version: 1,
+      exportedAt: new Date().toISOString(),
+      errors: customErrors, stats: stats, prefs: prefs
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const d = new Date();
+    const stamp = d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0');
+    const a = document.createElement('a');
+    a.href = url; a.download = `revisao-turbo-backup-${stamp}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    backupMsg('Backup exportado! Guarde o arquivo .json 📁');
+  }
+
+  // mescla o conteúdo de um backup (vindo de arquivo OU da nuvem) no estado local —
+  // mesma lógica seletiva de sempre: evita duplicar por uid e por conteúdo.
+  // devolve { ok, addedErr, mergedTags } pra quem chamou decidir a mensagem final.
+  function applyBackupData(data) {
+    if (!data || data.app !== 'revisao-turbo') {
+      backupMsg('Esse backup não é do Revisão Turbo.', 'rose');
+      return { ok: false };
+    }
+    let addedErr = 0, mergedTags = 0;
+    if (Array.isArray(data.errors)) {
+      const haveUid = new Set(customErrors.map(e => e.uid));
+      const ckey = e => ((e.tag || '') + '§' + (e.q || '')).trim().toLowerCase();
+      const haveContent = new Set(customErrors.map(ckey));
+      data.errors.forEach(e => {
+        if (!e || !e.tag || !e.q || !e.a) return;
+        if (e.uid && haveUid.has(e.uid)) return;     // mesmo uid já existe
+        const k = ckey(e);
+        if (haveContent.has(k)) return;              // mesmo conteúdo já existe (de outro aparelho)
+        haveUid.add(e.uid || ''); haveContent.add(k);
+        customErrors.push({ uid: e.uid || uid(), tag: e.tag, q: e.q, a: e.a, srLevel: e.srLevel || 0, due: e.due || 0, ts: e.ts || Date.now() });
+        addedErr++;
+      });
+    }
+    if (data.stats && typeof data.stats === 'object') {
+      Object.entries(data.stats).forEach(([tag, v]) => {
+        if (!v || typeof v.total !== 'number') return;
+        if (!stats[tag] || v.total > stats[tag].total) { stats[tag] = { correct: v.correct || 0, total: v.total }; mergedTags++; }
+      });
+    }
+    if (data.prefs && typeof data.prefs === 'object') {
+      if (ENERGY[data.prefs.energy]) prefs.energy = data.prefs.energy;
+      if (typeof data.prefs.sound === 'boolean') prefs.sound = data.prefs.sound;
+      if (typeof data.prefs.useExamples === 'boolean') prefs.useExamples = data.prefs.useExamples;
+    }
+    saveErrors(); saveStats(); savePrefs();
+    renderCustomList(); refreshTagSuggestions(); syncSoundBtn();
+    if ($('useExamples')) $('useExamples').checked = !!prefs.useExamples;
+    return { ok: true, addedErr, mergedTags };
+  }
+
+  function importData(file) {
+    const reader = new FileReader();
+    reader.onload = async () => {
+      let data;
+      try { data = JSON.parse(reader.result); }
+      catch (e) { return backupMsg('Arquivo inválido (não é um JSON).', 'rose'); }
+      const res = applyBackupData(data);
+      if (!res.ok) return;   // applyBackupData já mostrou a mensagem de erro
+
+      // ao IMPORTAR (não ao exportar) é que guardamos uma cópia na nuvem —
+      // é o momento em que os dados realmente mudam bastante (ex.: atualização
+      // do banco de cards), então é isso que precisa propagar pros outros aparelhos.
+      if (currentUser) {
+        backupMsg(`Importado: ${res.addedErr} erro(s) e ${res.mergedTags} matéria(s). Salvando na nuvem…`);
+        const cloudRes = await pushBackupToCloud(data);
+        if (cloudRes.ok) {
+          backupMsg(`Importado: ${res.addedErr} erro(s) e ${res.mergedTags} matéria(s) ✓ Salvo na nuvem, disponível em qualquer aparelho.`);
+          loadCloudBackups();
+        } else {
+          backupMsg(`Importado: ${res.addedErr} erro(s) e ${res.mergedTags} matéria(s). Não consegui salvar uma cópia na nuvem agora.`, 'rose');
+        }
+      } else {
+        backupMsg(`Importado: ${res.addedErr} erro(s) e ${res.mergedTags} matéria(s) ✓`);
+      }
+    };
+    reader.onerror = () => backupMsg('Não consegui ler o arquivo.', 'rose');
+    reader.readAsText(file);
+  }
+
+  // ====== BACKUPS NA NUVEM (guardados junto com a conta, restauráveis de qualquer aparelho) ======
+  async function pushBackupToCloud(data) {
+    if (!currentUser) return { ok: false, reason: 'sem-login' };
+    try {
+      await loadFirebase();
+      const col = fb.collection(fb.db, 'users', currentUser.uid, 'backups');
+      await fb.addDoc(col, { data, createdAt: Date.now() });
+      return { ok: true };
+    } catch (e) {
+      return { ok: false, reason: e.code || 'erro' };
+    }
+  }
+
+  let cloudBackupsCache = [];
+
+  async function loadCloudBackups() {
+    const listEl = $('cloudBackupsList');
+    const msgEl = $('cloudBackupsMsg');
+    if (!listEl) return;
+    if (!currentUser) {
+      listEl.innerHTML = '';
+      if (msgEl) { msgEl.textContent = 'Entre na sua conta para ver os backups salvos na nuvem.'; msgEl.classList.remove('hidden'); }
+      return;
+    }
+    if (msgEl) { msgEl.textContent = 'Carregando…'; msgEl.classList.remove('hidden'); }
+    try {
+      await loadFirebase();
+      const col = fb.collection(fb.db, 'users', currentUser.uid, 'backups');
+      const q = fb.query(col, fb.orderBy('createdAt', 'desc'), fb.limit(10));
+      const snap = await fb.getDocs(q);
+      const backups = [];
+      snap.forEach(docSnap => {
+        const v = docSnap.data();
+        backups.push({ id: docSnap.id, createdAt: v.createdAt || 0, data: v.data || {} });
+      });
+      cloudBackupsCache = backups;
+      renderCloudBackupsList(backups);
+      if (msgEl) msgEl.classList.add('hidden');
+    } catch (e) {
+      if (msgEl) { msgEl.textContent = 'Não consegui carregar os backups da nuvem agora.'; msgEl.classList.remove('hidden'); }
+    }
+  }
+
+  function renderCloudBackupsList(backups) {
+    const el = $('cloudBackupsList');
+    if (!el) return;
+    if (!backups.length) {
+      el.innerHTML = '<p class="text-[11px] text-slate-500 text-center py-1">Nenhum backup salvo na nuvem ainda.</p>';
+      return;
+    }
+    el.innerHTML = backups.map(b => {
+      const d = new Date(b.createdAt || 0);
+      const label = isNaN(d.getTime()) ? 'Backup' :
+        d.toLocaleDateString('pt-BR') + ' ' + d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      return `
+        <div class="rounded-xl bg-slate-800/60 ring-1 ring-white/5 p-3 flex items-center justify-between gap-2">
+          <span class="text-[12px] text-slate-300 truncate">${escapeHtml(label)}</span>
+          <button data-restore="${b.id}" class="rounded-lg bg-white/5 hover:bg-white/10 text-slate-100 active:scale-90 transition px-2.5 py-1 text-[11px] font-bold shrink-0">Restaurar</button>
+        </div>`;
+    }).join('');
+    el.querySelectorAll('[data-restore]').forEach(btn =>
+      btn.addEventListener('click', () => restoreCloudBackup(btn.dataset.restore)));
+  }
+
+  function restoreCloudBackup(id) {
+    const b = cloudBackupsCache.find(x => x.id === id);
+    if (!b) return;
+    const res = applyBackupData(b.data);
+    if (res.ok) backupMsg(`Restaurado: ${res.addedErr} erro(s) e ${res.mergedTags} matéria(s) ✓`);
+  }
+
+  // mescla dados vindos da nuvem (mesma lógica segura do import, sem mensagens)
+  function mergeRemote(data) {
+    let changed = false;
+    // 1) primeiro absorve as "lápides" de exclusão que vieram da nuvem (cards apagados
+    //    em outro aparelho) — isso precisa acontecer ANTES de mesclar os cards, senão
+    //    um aparelho com estado antigo na memória ressuscita o que já foi apagado.
+    let deletedChanged = false;
+    if (data.deleted && typeof data.deleted === 'object') {
+      Object.entries(data.deleted).forEach(([k, ts]) => {
+        ts = Number(ts) || 0;
+        if (!deletedKeys[k] || ts > deletedKeys[k]) { deletedKeys[k] = ts; deletedChanged = true; }
+      });
+    }
+    if (deletedChanged) {
+      // remove localmente qualquer card cuja "lápide" seja mais nova que sua última edição/revisão
+      // (propaga a exclusão feita em outro aparelho para este)
+      const before = customErrors.length;
+      customErrors = customErrors.filter(e => {
+        const delTs = deletedKeys[ckey(e)];
+        return !(delTs && delTs >= (e.ts || 0));
+      });
+      if (customErrors.length !== before) changed = true;
+      saveDeletedKeys();
+    }
+    if (Array.isArray(data.errors)) {
+      const byUid = new Map(customErrors.map(e => [e.uid, e]));
+      // chave de conteúdo (matéria + pergunta) para não duplicar o MESMO card
+      // que foi importado em aparelhos diferentes (uids diferentes, conteúdo igual)
+      const contentKeys = new Set(customErrors.map(ckey));
+      data.errors.forEach(e => {
+        if (!e || !e.tag || !e.q || !e.a) return;
+        const k = ckey(e);
+        const delTs = deletedKeys[k];
+        if (delTs && delTs >= (e.ts || 0)) return; // este card foi apagado de propósito — não ressuscitar
+        const ex = e.uid && byUid.get(e.uid);
+        if (!ex) {
+          // sem mesmo uid: só adiciona se o CONTEÚDO ainda não existir aqui
+          if (contentKeys.has(k)) return;     // já existe esse card (de outro aparelho) — não duplica
+          contentKeys.add(k);
+          customErrors.push({ uid: e.uid || uid(), tag: e.tag, q: e.q, a: e.a, srLevel: e.srLevel || 0, due: e.due || 0, ts: e.ts || 0 });
+          changed = true;
+        } else if ((e.ts || 0) > (ex.ts || 0)) {
+          // card existente: adota o que foi revisado por último (repetição espaçada)
+          ex.tag = e.tag; ex.q = e.q; ex.a = e.a;
+          ex.srLevel = e.srLevel || 0; ex.due = e.due || 0; ex.ts = e.ts || 0;
+          changed = true;
+        }
+      });
+    }
+    if (data.stats && typeof data.stats === 'object') {
+      Object.entries(data.stats).forEach(([tag, v]) => {
+        if (v && typeof v.total === 'number' && (!stats[tag] || v.total > stats[tag].total)) {
+          stats[tag] = { correct: v.correct || 0, total: v.total }; changed = true;
+        }
+      });
+    }
+    if (data.prefs && typeof data.prefs === 'object') {
+      if (ENERGY[data.prefs.energy] && data.prefs.energy !== prefs.energy) { prefs.energy = data.prefs.energy; changed = true; }
+      if (typeof data.prefs.sound === 'boolean') prefs.sound = data.prefs.sound;
+      if (typeof data.prefs.useExamples === 'boolean') prefs.useExamples = data.prefs.useExamples;
+      if (data.prefs.dailyGoal > 0) prefs.dailyGoal = data.prefs.dailyGoal;
+      if (typeof data.prefs.autoSpeak === 'boolean') prefs.autoSpeak = data.prefs.autoSpeak;
+    }
+    // progresso/ofensiva: mantém o registro do dia mais recente e a melhor marca
+    if (data.progress && typeof data.progress === 'object') {
+      const rp = data.progress;
+      // se um zerar-ofensiva mais recente aconteceu em outro aparelho, ele "ganha" na
+      // hora, mesmo que este aparelho tenha uma ofensiva maior guardada — sem isso, a
+      // lógica abaixo (que sempre mantém o MAIOR valor) nunca aceitaria o zero de volta.
+      if ((rp.resetAt || 0) > (progress.resetAt || 0)) {
+        progress.resetAt = rp.resetAt;
+        progress.streak = rp.streak || 0;
+        progress.goalMetDate = rp.goalMetDate || '';
+        if (rp.date) { progress.date = rp.date; progress.today = rp.today || 0; }
+        changed = true;
+      } else if (rp.date && (!progress.date || rp.date > progress.date)) {
+        progress.date = rp.date; progress.today = rp.today || 0;
+        progress.streak = rp.streak || 0; progress.goalMetDate = rp.goalMetDate || '';
+        changed = true;
+      } else if (rp.date === progress.date && (rp.today || 0) > (progress.today || 0)) {
+        progress.today = rp.today; progress.streak = Math.max(progress.streak || 0, rp.streak || 0);
+        progress.goalMetDate = rp.goalMetDate || progress.goalMetDate; changed = true;
+      }
+      progress.best = Math.max(progress.best || 0, rp.best || 0);
+      normalizeProgress();
+    }
+    return changed;
+  }
+
+  // ====== SINCRONIZAÇÃO NA NUVEM (login por e-mail e senha — Firebase Auth + Firestore) ======
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyA8T8MzeDoMT54ko18BmDEpfmaOFwrZPNI",
+    authDomain: "concursos-renata.firebaseapp.com",
+    projectId: "concursos-renata",
+    storageBucket: "concursos-renata.firebasestorage.app",
+    messagingSenderId: "994258025932",
+    appId: "1:994258025932:web:3d5ec792145f7b55b7b169"
+  };
+  const FB_VER = '10.12.0';
+  let fb = null;            // { db, doc, getDoc, setDoc, onSnapshot, auth, createUser, signIn, signOutFn, onAuthChange, resetPass }
+  let currentUser = null;   // usuário autenticado no momento (ou null)
+  let pushTimer = null;
+  let pulling = false;
+  let unsubSnap = null;     // cancela o listener em tempo real
+  let applyingRemote = false; // evita "eco" (não reenvia o que acabou de baixar)
+
+  function cloudStatus(text, kind) {
+    [$('cloudStatus'), $('authGateStatus')].forEach(el => {
+      if (!el) return;
+      el.textContent = text;
+      el.classList.remove('hidden', 'text-emerald-300', 'text-rose-300', 'text-slate-400');
+      el.classList.add(kind === 'erro' ? 'text-rose-300' : kind === 'ok' ? 'text-emerald-300' : 'text-slate-400');
+    });
+  }
+
+  // ====== PORTAL DE ENTRADA (login obrigatório para usar o app) ======
+  function showAuthGateChecking() {
+    const gate = $('authGate');
+    if (!gate) return;
+    gate.classList.remove('hidden');
+    if ($('authGateChecking')) $('authGateChecking').classList.remove('hidden');
+    if ($('authGateOffline')) $('authGateOffline').classList.add('hidden');
+    if ($('authGateForm')) $('authGateForm').classList.add('hidden');
+  }
+  function showAuthGateOffline() {
+    const gate = $('authGate');
+    if (!gate) return;
+    gate.classList.remove('hidden');
+    if ($('authGateChecking')) $('authGateChecking').classList.add('hidden');
+    if ($('authGateOffline')) $('authGateOffline').classList.remove('hidden');
+    if ($('authGateForm')) $('authGateForm').classList.add('hidden');
+  }
+  function showAuthGateForm() {
+    const gate = $('authGate');
+    if (!gate) return;
+    gate.classList.remove('hidden');
+    if ($('authGateChecking')) $('authGateChecking').classList.add('hidden');
+    if ($('authGateOffline')) $('authGateOffline').classList.add('hidden');
+    if ($('authGateForm')) $('authGateForm').classList.remove('hidden');
+  }
+  function hideAuthGate() {
+    const gate = $('authGate');
+    if (gate) gate.classList.add('hidden');
+  }
+  function updateCloudUI() {
+    const inEl = $('cloudLoggedIn'), outEl = $('cloudLoggedOut');
+    if (!inEl || !outEl) return;
+    if (currentUser) {
+      outEl.classList.add('hidden'); inEl.classList.remove('hidden');
+      $('authEmailShown').textContent = currentUser.email || '';
+    } else {
+      inEl.classList.add('hidden'); outEl.classList.remove('hidden');
+    }
+  }
+
+  // mensagens de erro do Firebase Auth traduzidas e simplificadas
+  function authErrorMsg(e) {
+    const code = (e && e.code) || '';
+    const map = {
+      'auth/email-already-in-use': 'Esse e-mail já tem conta. Tente entrar em vez de criar.',
+      'auth/invalid-email': 'E-mail inválido. Confira se digitou certo.',
+      'auth/weak-password': 'Senha muito curta — use pelo menos 6 caracteres.',
+      'auth/missing-password': 'Digite uma senha.',
+      'auth/user-not-found': 'Não achei conta com esse e-mail. Quer criar uma?',
+      'auth/wrong-password': 'Senha incorreta.',
+      'auth/invalid-credential': 'E-mail ou senha incorretos.',
+      'auth/too-many-requests': 'Muitas tentativas seguidas. Espere um pouco e tente de novo.',
+      'auth/network-request-failed': 'Sem conexão com a internet agora.',
+    };
+    return map[code] || ('Não consegui fazer isso (' + (code || 'erro') + ').');
+  }
+
+  async function loadFirebase() {
+    if (fb) return fb;
+    const base = `https://www.gstatic.com/firebasejs/${FB_VER}`;
+    const [appMod, fsMod, authMod] = await Promise.all([
+      import(`${base}/firebase-app.js`),
+      import(`${base}/firebase-firestore.js`),
+      import(`${base}/firebase-auth.js`),
+    ]);
+    const app = appMod.initializeApp(FIREBASE_CONFIG);
+    const db = fsMod.getFirestore(app);
+    const auth = authMod.getAuth(app);
+    // mantém a sessão salva neste aparelho, para não pedir a senha de novo a cada visita
+    try { await authMod.setPersistence(auth, authMod.browserLocalPersistence); } catch (e) {}
+    fb = {
+      db, auth,
+      doc: fsMod.doc, getDoc: fsMod.getDoc, setDoc: fsMod.setDoc, onSnapshot: fsMod.onSnapshot,
+      collection: fsMod.collection, addDoc: fsMod.addDoc, getDocs: fsMod.getDocs,
+      query: fsMod.query, orderBy: fsMod.orderBy, limit: fsMod.limit,
+      createUser: authMod.createUserWithEmailAndPassword,
+      signIn: authMod.signInWithEmailAndPassword,
+      signOutFn: authMod.signOut,
+      onAuthChange: authMod.onAuthStateChanged,
+      resetPass: authMod.sendPasswordResetEmail,
+    };
+    return fb;
+  }
+
+  let authListenerAttached = false;
+  let cloudRetryTimer = null;
+
+  // ao abrir o app, mostra o portal de entrada e liga o "ouvinte" de login:
+  // se já tiver entrado antes neste aparelho, o Firebase Auth lembra sozinho
+  // (sem precisar digitar a senha de novo) e o app libera o acesso direto.
+  // Se a verificação falhar (ex.: sem internet no exato momento de abrir o app),
+  // tenta de novo sozinho algumas vezes antes de mostrar a opção de "tentar novamente".
+  async function initCloud(attempt) {
+    attempt = attempt || 0;
+    if (attempt === 0) showAuthGateChecking();
+    try {
+      await loadFirebase();
+      if (!authListenerAttached) {
+        authListenerAttached = true;
+        fb.onAuthChange(fb.auth, async (user) => {
+          stopSnapshot();
+          currentUser = user || null;
+          updateCloudUI();
+          if (currentUser) {
+            hideAuthGate();
+            cloudStatus('Sincronizando…');
+            await pullCloud();
+            pushCloud(0);
+            startSnapshot();
+          } else {
+            showAuthGateForm();
+          }
+        });
+      }
+    } catch (e) {
+      if (attempt < 6) {
+        clearTimeout(cloudRetryTimer);
+        const delay = Math.min(30000, 1000 * Math.pow(2, attempt));
+        cloudRetryTimer = setTimeout(() => initCloud(attempt + 1), delay);
+      } else {
+        showAuthGateOffline();
+      }
+    }
+  }
+
+  async function authSignup() {
+    const email = ($('authEmail').value || '').trim();
+    const password = $('authPassword').value || '';
+    if (!email || !password) return cloudStatus('Preencha e-mail e senha.', 'erro');
+    cloudStatus('Criando conta…');
+    try {
+      await loadFirebase();
+      await fb.createUser(fb.auth, email, password);
+      // onAuthStateChanged cuida de puxar/subir os dados e ligar a sincronização
+      cloudStatus('Conta criada ✓ Use o mesmo e-mail e senha no outro aparelho.', 'ok');
+    } catch (e) {
+      cloudStatus(authErrorMsg(e), 'erro');
+    }
+  }
+
+  async function authLogin() {
+    const email = ($('authEmail').value || '').trim();
+    const password = $('authPassword').value || '';
+    if (!email || !password) return cloudStatus('Preencha e-mail e senha.', 'erro');
+    cloudStatus('Entrando…');
+    try {
+      await loadFirebase();
+      await fb.signIn(fb.auth, email, password);
+      cloudStatus('Conectado e sincronizado ✓', 'ok');
+    } catch (e) {
+      cloudStatus(authErrorMsg(e), 'erro');
+    }
+  }
+
+  async function authForgotPassword() {
+    const email = ($('authEmail').value || '').trim();
+    if (!email) return cloudStatus('Digite seu e-mail no campo acima primeiro.', 'erro');
+    try {
+      await loadFirebase();
+      await fb.resetPass(fb.auth, email);
+      cloudStatus('Te mandei um e-mail com o link pra criar uma senha nova ✓', 'ok');
+    } catch (e) {
+      cloudStatus(authErrorMsg(e), 'erro');
+    }
+  }
+
+  async function authLogout() {
+    stopSnapshot();
+    clearTimeout(pushTimer);
+    try { await loadFirebase(); await fb.signOutFn(fb.auth); } catch (e) {}
+    currentUser = null;
+    updateCloudUI();
+    cloudStatus('Desconectado. Os dados continuam salvos neste aparelho.');
+  }
+
+  // aplica dados vindos da nuvem ao estado local e atualiza a tela (sem reenviar)
+  function applyRemoteData(data) {
+    applyingRemote = true;
+    try {
+      const changed = mergeRemote(data || {});
+      if (changed) {
+        saveErrors(); saveStats(); savePrefs(); saveProgress();
+        syncSoundBtn();
+        if (!playing) { renderEnergy(); renderSubjectFilter(); renderToday(); renderChart(); }
+        if ($('settingsModal') && !$('settingsModal').classList.contains('hidden')) {
+          renderCustomList(); refreshTagSuggestions();
+        }
+      }
+      return changed;
+    } finally { applyingRemote = false; }
+  }
+
+  // leitura única (usada ao logar, antes de ligar o tempo real)
+  async function pullCloud() {
+    if (!fb || !currentUser || pulling) return;
+    pulling = true;
+    try {
+      const ref = fb.doc(fb.db, 'users', currentUser.uid);
+      const snap = await fb.getDoc(ref);
+      if (snap.exists()) applyRemoteData(snap.data());
+    } catch (e) {
+      cloudStatus('Não consegui baixar da nuvem (' + (e.code || 'erro') + ').', 'erro');
+    } finally { pulling = false; }
+  }
+
+  // listener em tempo real: qualquer mudança na nuvem aparece sozinha (com internet)
+  function startSnapshot() {
+    if (!fb || !currentUser || !fb.onSnapshot) return;
+    stopSnapshot();
+    const ref = fb.doc(fb.db, 'users', currentUser.uid);
+    unsubSnap = fb.onSnapshot(ref, (snap) => {
+      if (snap && snap.exists()) {
+        const changed = applyRemoteData(snap.data());
+        if (changed) cloudStatus('Atualizado da nuvem ✓', 'ok');
+      }
+    }, (err) => {
+      cloudStatus('Sincronização em tempo real pausada (' + (err && err.code || 'sem conexão') + ').', 'erro');
+    });
+  }
+  function stopSnapshot() {
+    if (unsubSnap) { try { unsubSnap(); } catch (e) {} unsubSnap = null; }
+  }
+
+  // envia o estado atual (com debounce). chamado pelos save*().
+  function pushCloud(delay) {
+    if (!fb || !currentUser) return;
+    clearTimeout(pushTimer);
+    pushTimer = setTimeout(async () => {
+      try {
+        const ref = fb.doc(fb.db, 'users', currentUser.uid);
+        await fb.setDoc(ref, { errors: customErrors, deleted: deletedKeys, stats, prefs, progress, updatedAt: Date.now() }, { merge: true });
+        cloudStatus('Sincronizado ✓', 'ok');
+      } catch (e) {
+        cloudStatus('Falha ao enviar (' + (e.code || 'erro') + ').', 'erro');
+      }
+    }, delay == null ? 900 : delay);
+  }
+
+  // ====== SOM (mudo / ligado) ======
+  function syncSoundBtn() {
+    [$('soundBtn'), $('soundBtnMenu')].forEach(b => {
+      if (!b) return;
+      b.textContent = prefs.sound ? '🔊' : '🔇';
+      b.classList.toggle('opacity-50', !prefs.sound);
+      b.title = prefs.sound ? 'Som ligado (clique para mudo)' : 'Som mudo (clique para ligar)';
+    });
+  }
+  function toggleSound() {
+    prefs.sound = !prefs.sound;
+    savePrefs();
+    syncSoundBtn();
+    if (prefs.sound) SFX.correct(); // feedback ao reativar
+  }
+
+  // ====== MENU / NÍVEL DE ENERGIA ======
+  function renderEnergy() {
+    const grid = $('energyGrid');
+    grid.innerHTML = '';
+    Object.entries(ENERGY).forEach(([key, e]) => {
+      const b = document.createElement('button');
+      b.className = 'energy-card rounded-2xl bg-slate-800/60 ring-1 ring-white/10 p-3 flex flex-col items-center gap-0.5 active:scale-95 transition';
+      b.dataset.energy = key;
+      b.innerHTML = `<span class="text-2xl">${e.emoji}</span><span class="text-sm font-bold">${e.label}</span><span class="text-[10px] text-slate-400">${e.cards} cards · ${e.timer}s</span>`;
+      b.addEventListener('click', () => selectEnergy(key));
+      grid.appendChild(b);
+    });
+    highlightEnergy();
+  }
+  function selectEnergy(key) {
+    if (!ENERGY[key]) return;
+    prefs.energy = key;
+    savePrefs();
+    highlightEnergy();
+  }
+  function highlightEnergy() {
+    const e = ENERGY[prefs.energy] || ENERGY.media;
+    $('energyDesc').textContent = e.desc;
+    $('energyGrid').querySelectorAll('[data-energy]').forEach(b =>
+      b.classList.toggle('selected', b.dataset.energy === prefs.energy));
+  }
+
+  // ====== CARD "HOJE" (vencidos + ofensiva + meta) ======
+  function renderToday() {
+    normalizeProgress();
+    const due = dueCount(prefs.filterTag);
+    $('dueToday').textContent = totalCards();
+    $('streakNum').innerHTML = (progress.streak || 0) + '<span class="text-lg">🔥</span>';
+    $('goalToday').textContent = progress.today || 0;
+    $('goalTarget').textContent = prefs.dailyGoal;
+    $('goalValue').textContent = prefs.dailyGoal;
+    const pct = Math.max(0, Math.min(100, (progress.today / prefs.dailyGoal) * 100));
+    $('goalBar').style.width = pct + '%';
+    // rótulo do botão Começar
+    const lbl = $('startLabel');
+    if (due > 0) lbl.textContent = `Revisar ${Math.min(due, cardCountFor())} de hoje`;
+    else if (totalCards() === 0) lbl.textContent = 'Cadastrar erros';
+    else lbl.textContent = 'Tudo em dia! Revisar adiantado';
+  }
+  function totalCards() {
+    return prefs.filterTag ? customErrors.filter(c => c.tag === prefs.filterTag).length : customErrors.length;
+  }
+  function cardCountFor() { return (ENERGY[prefs.energy] || ENERGY.media).cards; }
+
+  function changeGoal(delta) {
+    const steps = [5, 10, 15, 20, 30, 40, 50, 75, 100];
+    let i = steps.indexOf(prefs.dailyGoal);
+    if (i < 0) i = 3;
+    i = Math.max(0, Math.min(steps.length - 1, i + delta));
+    prefs.dailyGoal = steps[i];
+    savePrefs();
+    renderToday();
+  }
+
+  // ====== FILTRO POR MATÉRIA ======
+  function renderSubjectFilter() {
+    const sel = $('subjectFilter');
+    const tags = [...new Set(customErrors.map(c => c.tag))].sort();
+    sel.innerHTML = '<option value="">Todas as matérias (recomendado)</option>'
+      + tags.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)} (${dueCount(t)} hoje)</option>`).join('');
+    if (prefs.filterTag && !tags.includes(prefs.filterTag)) prefs.filterTag = '';
+    sel.value = prefs.filterTag || '';
+  }
+
+  // ====== GRÁFICO DE ACERTOS POR MATÉRIA (CSS puro) ======
+  function renderChart() {
+    const chart = $('statsChart');
+    chart.innerHTML = '';
+    const entries = Object.entries(stats).filter(([, v]) => v && v.total > 0);
+    $('statsEmpty').classList.toggle('hidden', entries.length > 0);
+    entries.sort((a, b) => (b[1].correct / b[1].total) - (a[1].correct / a[1].total));
+    entries.forEach(([tag, v]) => {
+      const pct = Math.round((v.correct / v.total) * 100);
+      const color = pct >= 75 ? 'from-emerald-400 to-teal-400'
+                  : pct >= 50 ? 'from-amber-400 to-yellow-400'
+                  : 'from-rose-400 to-orange-400';
+      const row = document.createElement('div');
+      row.innerHTML = `
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-xs font-semibold text-slate-200">${escapeHtml(tag)}</span>
+          <span class="text-[11px] font-bold tabular-nums text-slate-300">${pct}% <span class="text-slate-500 font-normal">(${v.correct}/${v.total})</span></span>
+        </div>
+        <div class="h-2.5 w-full overflow-hidden rounded-full bg-slate-800">
+          <div class="bar-fill h-full rounded-full bg-gradient-to-r ${color}" style="width:0%"></div>
+        </div>`;
+      chart.appendChild(row);
+      requestAnimationFrame(() => {
+        const f = row.querySelector('.bar-fill');
+        if (f) f.style.width = pct + '%';
+      });
+    });
+  }
+  function resetStats() {
+    stats = {};
+    saveStats();
+    renderChart();
+  }
+
+  // ====== POMODORO (foco 15min / pausa obrigatória 3min) ======
+  const POMO_WORK = 15 * 60;   // segundos de foco até a pausa
+  const POMO_BREAK = 3 * 60;   // segundos de pausa obrigatória
+  let studySeconds = 0, pomoId = null;
+  let onBreak = false, breakId = null, breakLeft = 0;
+
+  function startPomodoro(reset) {
+    stopPomodoro();
+    if (reset) studySeconds = 0;
+    updatePomoUI();
+    pomoId = setInterval(() => {
+      studySeconds++;
+      updatePomoUI();
+      if (studySeconds >= POMO_WORK) triggerBreak();
+    }, 1000);
+  }
+  function stopPomodoro() { if (pomoId) { clearInterval(pomoId); pomoId = null; } }
+  function fmt(s) { const m = Math.floor(s / 60); return m + ':' + String(s % 60).padStart(2, '0'); }
+  function updatePomoUI() {
+    const remain = Math.max(0, POMO_WORK - studySeconds);
+    $('pomoText').textContent = fmt(remain);
+    $('pomoBar').style.width = Math.min(100, studySeconds / POMO_WORK * 100) + '%';
+  }
+  function triggerBreak() {
+    stopPomodoro();
+    stopTimer();                       // congela o cronômetro do card
+    onBreak = true;
+    breakLeft = POMO_BREAK;
+    $('breakOverlay').classList.remove('hidden');
+    if (prefs.sound) SFX.goal();       // avisa que ganhou a pausa
+    paintBreak();
+    breakId = setInterval(() => {
+      breakLeft--;
+      paintBreak();
+      if (breakLeft <= 0) endBreak();
+    }, 1000);
+  }
+  function paintBreak() {
+    $('breakCountdown').textContent = fmt(Math.max(0, breakLeft));
+    $('breakBar').style.width = Math.max(0, breakLeft / POMO_BREAK * 100) + '%';
+    $('breathHint').textContent = (Math.floor(breakLeft / 4) % 2 === 0) ? 'Expire…' : 'Inspire…';
+  }
+  function endBreak() {
+    if (breakId) { clearInterval(breakId); breakId = null; }
+    onBreak = false;
+    $('breakOverlay').classList.add('hidden');
+    if (prefs.sound) SFX.correct();
+    if (playing) {
+      startPomodoro(true);
+      if (active && !active.dataset.done) startTimer();   // retoma o card atual
+    }
+  }
+
+  // ====== TROCA DE TELAS (menu ↔ jogo) ======
+  let playing = false;
+  function isBlocked() {
+    return onBreak || !playing
+      || !$('settingsModal').classList.contains('hidden')
+      || !$('syncModal').classList.contains('hidden');
+  }
+  function showMenu() {
+    playing = false;
+    stopPomodoro();
+    stopTimer();
+    stopSpeak();
+    $('appScreen').classList.add('hidden');
+    $('menuScreen').classList.remove('hidden');
+    renderEnergy();
+    renderSubjectFilter();
+    renderToday();
+    renderChart();
+    syncSoundBtn();
+    try { window.scrollTo(0, 0); } catch (e) {}
+  }
+  function startSession() {
+    const e = ENERGY[prefs.energy] || ENERGY.media;
+    cardCount = e.cards;
+    TIMER_SECONDS = e.timer;
+    // se não há nada vencido, entra em modo "revisar adiantado"
+    reviewAhead = dueCount(prefs.filterTag) === 0;
+    $('menuScreen').classList.add('hidden');
+    $('appScreen').classList.remove('hidden');
+    playing = true;
+    init();
+    startPomodoro(true);
+    try { window.scrollTo(0, 0); } catch (e) {}
+  }
+
+  // ====== EVENTOS GLOBAIS ======
+  $('btnRight').addEventListener('click', () => triggerSwipe('right'));
+  $('btnWrong').addEventListener('click', () => triggerSwipe('left'));
+  $('rouletteBtn').addEventListener('click', spinRoulette);
+  $('restartBtn').addEventListener('click', init);
+  $('soundBtn').addEventListener('click', toggleSound);
+  $('soundBtnMenu').addEventListener('click', toggleSound);
+  $('settingsBtnMenu').addEventListener('click', openSettings);
+  $('syncBtnMenu').addEventListener('click', openSync);
+  $('closeSync').addEventListener('click', closeSync);
+  $('syncBackdrop').addEventListener('click', closeSync);
+  $('startBtn').addEventListener('click', startSession);
+  $('homeBtn').addEventListener('click', showMenu);
+  $('resetStats').addEventListener('click', resetStats);
+  $('goalUp').addEventListener('click', () => changeGoal(1));
+  $('goalDown').addEventListener('click', () => changeGoal(-1));
+  $('resetStreak').addEventListener('click', resetStreak);
+  $('subjectFilter').addEventListener('change', (e) => {
+    prefs.filterTag = e.target.value || '';
+    savePrefs();
+    renderToday();
+  });
+
+  // Configurações
+  $('settingsBtn').addEventListener('click', openSettings);
+  $('closeSettings').addEventListener('click', closeSettings);
+  $('settingsBackdrop').addEventListener('click', closeSettings);
+  $('openSettingsEmpty').addEventListener('click', openSettings);
+  $('errorForm').addEventListener('submit', submitError);
+  $('cancelEdit').addEventListener('click', resetForm);
+  $('clearAll').addEventListener('click', clearAllErrors);
+  $('searchCards').addEventListener('input', renderCustomList);
+  $('searchClear').addEventListener('click', () => { $('searchCards').value = ''; renderCustomList(); $('searchCards').focus(); });
+  $('bulkImport').addEventListener('click', doBulkImport);
+  $('autoSpeak').addEventListener('change', (e) => { prefs.autoSpeak = e.target.checked; savePrefs(); });
+  $('applyAndClose').addEventListener('click', () => {
+    closeSettings();
+    if (playing) init();   // se estiver jogando, recarrega o baralho; no menu, só salva
+  });
+
+  // Backup / sincronização
+  $('exportData').addEventListener('click', exportData);
+  $('refreshBackups').addEventListener('click', () => loadCloudBackups());
+  $('importData').addEventListener('click', () => $('importFile').click());
+  $('importFile').addEventListener('change', (e) => {
+    const f = e.target.files && e.target.files[0];
+    if (f) importData(f);
+    e.target.value = '';   // permite reimportar o mesmo arquivo
+  });
+
+  // Sincronização na nuvem (login por e-mail/senha)
+  $('authLoginBtn').addEventListener('click', authLogin);
+  $('authForgotBtn').addEventListener('click', authForgotPassword);
+  $('authLogoutBtn').addEventListener('click', authLogout);
+  $('authPassword').addEventListener('keydown', (e) => { if (e.key === 'Enter') authLogin(); });
+  $('authGateRetryBtn').addEventListener('click', () => initCloud(0));
+
+  window.addEventListener('keydown', (e) => {
+    if (e.repeat || isBlocked()) return;
+    if (e.key === 'ArrowRight') triggerSwipe('right');
+    else if (e.key === 'ArrowLeft') triggerSwipe('left');
+    else if (e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      const top = deckEl.querySelector('.swipe-card[data-depth="0"]');
+      if (top) {
+        const c = deckCards.find(x => x.id == top.dataset.id);
+        if (c) revealAnswer(top, c);
+      }
+    }
+  });
+
+  // reforça a sincronização quando o app volta a aparecer ou a internet retorna
+  function rearmSync() {
+    if (!fb) { initCloud(); return; }        // o Firebase nunca chegou a carregar — tenta de novo agora
+    if (!currentUser) return;
+    if (!unsubSnap) startSnapshot();        // religa o tempo real, se caiu
+    pullCloud();                            // e dá uma atualizada pontual
+  }
+  window.addEventListener('online', rearmSync);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) rearmSync(); });
+
+  loadStorage();
+  syncSoundBtn();
+  showMenu();   // prepara o Menu por trás do portal de entrada
+  initCloud();  // verifica login: libera o acesso se já estiver logada, senão mostra o portal de entrada
+})();
+</script>
+
+<!-- Registro do Service Worker (PWA) — só em http(s), nunca em file:// -->
+<script>
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>
