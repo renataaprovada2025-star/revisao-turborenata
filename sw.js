@@ -1,6 +1,6 @@
 /* Service Worker — Revisão Turbo
    Estratégia: cache-first (offline-first). Funciona sem internet depois da 1ª visita. */
-const CACHE = 'revisao-turbo-v21';
+const CACHE = 'revisao-turbo-v22';
 const ASSETS = [
   './',
   './index.html',
